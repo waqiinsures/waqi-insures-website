@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://waqi-insures.com/sitemap.xml
