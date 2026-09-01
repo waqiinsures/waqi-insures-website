@@ -44,11 +44,30 @@
   }
   root.querySelector('.rq-viewport').addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
   root.querySelector('.rq-viewport').addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-startX;if(Math.abs(d)>45)go(i+(d<0?1:-1))},{passive:true});
+  // Keep the approved built-in examples as fallback/context. Broker-published
+  // quotes are added in front of them instead of deleting the existing cards.
+  // The carousel remains capped at 10 cards total.
+  const previewCardsHTML=[...track.querySelectorAll('.rq-card')].map(card=>card.outerHTML);
   bind();
 
-  fetch(API,{mode:'cors',cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('feed');return r.json()}).then(items=>{
-    if(!Array.isArray(items)||!items.length)return; // current preview cards remain until first broker-published quote exists
-    track.innerHTML=items.slice(0,10).map(cardHTML).join('');
-    bind();
-  }).catch(()=>{}); // fail-safe: a temporary API outage never breaks the page
+  fetch(API,{mode:'cors',cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('feed');return r.json()})
+    .then(items=>{
+      const liveItems=Array.isArray(items) ? items.slice(0,10) : [];
+      const liveCards=liveItems.map(cardHTML);
+
+      // Approved behavior:
+      // 0 live  -> 3 built-in examples
+      // 1 live  -> 1 live + 3 examples
+      // ...
+      // 7 live  -> 7 live + 3 examples
+      // 8 live  -> 8 live + first 2 examples
+      // 9 live  -> 9 live + first example
+      // 10 live -> 10 live, no examples
+      // Never delete the built-in examples merely because the API responded.
+      const merged=[...liveCards,...previewCardsHTML].slice(0,10);
+      track.innerHTML=merged.join('');
+      bind();
+    })
+    .catch(()=>{}); // API outage: original 3 examples stay visible
 })();

@@ -4346,3 +4346,8 @@ body.recent-quotes-body header {
 @media (max-width:900px){
   body.recent-quotes-body header .links a:last-child{grid-column:auto!important;}
 }
+
+/* V19.6 — Mobile nav: keep all six tabs in the same two-column grid on every page */
+@media (max-width:900px){
+  header .links a:last-child{grid-column:auto!important;}
+}
