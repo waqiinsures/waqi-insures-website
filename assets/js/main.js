@@ -1,33 +1,5 @@
 document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}}));
 
-(function(){
-  document.body.classList.add('page-entering');
-  requestAnimationFrame(function(){
-    requestAnimationFrame(function(){
-      document.body.classList.remove('page-entering');
-    });
-  });
-
-  document.addEventListener('click', function(e){
-    var a=e.target.closest('a');
-    if(!a) return;
-    var href=a.getAttribute('href');
-    if(!href || href.startsWith('#') || a.target==='_blank' || a.hasAttribute('download')) return;
-    if(href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('sms:') || href.startsWith('https://wa.me/')) return;
-
-    var url;
-    try { url=new URL(a.href, window.location.href); } catch(err){ return; }
-    if(url.origin!==window.location.origin) return;
-
-    e.preventDefault();
-    document.body.classList.add('page-leaving');
-    setTimeout(function(){ window.location.href=url.href; }, 180);
-  });
-
-  window.addEventListener('pageshow', function(){
-    document.body.classList.remove('page-leaving','page-entering');
-  });
-})();
 
 /* ONE connector routine only:
    1 -> top-centre of first card

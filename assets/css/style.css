@@ -4351,3 +4351,2160 @@ body.recent-quotes-body header {
 @media (max-width:900px){
   header .links a:last-child{grid-column:auto!important;}
 }
+
+
+/* V19.15 — phone-only visible service navigation. Desktop/tablet unchanged. */
+.waqi-mobile-service-nav{display:none;}
+@media (max-width:600px){
+  .waqi-mobile-service-nav{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:6px;
+    width:100%;
+    padding:8px 10px 9px;
+    background:#06182a;
+    border-top:1px solid rgba(232,198,135,.10);
+    border-bottom:1px solid rgba(232,198,135,.18);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+  }
+  .waqi-mobile-service-nav a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-width:0;
+    min-height:38px;
+    padding:8px 4px;
+    border:1px solid rgba(232,198,135,.22);
+    border-radius:10px;
+    background:linear-gradient(180deg,#0b2745 0%,#071d34 100%);
+    color:#f5f3ed;
+    font-size:11px;
+    font-weight:750;
+    line-height:1;
+    letter-spacing:.01em;
+    text-align:center;
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .waqi-mobile-service-nav a:active{
+    color:#E8C687;
+    border-color:rgba(232,198,135,.65);
+    background:#0B2440;
+  }
+}
+
+/* =============================================================
+   V19.16 — HOMEPAGE PREMIUM POLISH
+   Scoped to .home-premium so Auto/Home/Commercial/Travel/Recent Quotes
+   keep their existing layout and functionality.
+   ============================================================= */
+.home-premium{
+  background:#03101c!important;
+}
+.home-premium main{
+  overflow:hidden;
+}
+.home-premium .home-premium-hero{
+  position:relative;
+  padding:58px 0 62px;
+  background:
+    radial-gradient(circle at 82% 16%,rgba(211,174,99,.17),transparent 24%),
+    radial-gradient(circle at 16% 20%,rgba(29,84,126,.22),transparent 30%),
+    linear-gradient(135deg,#020b14 0%,#071c31 58%,#0a2947 100%);
+  border-bottom:1px solid rgba(215,180,105,.18);
+}
+.home-premium .home-premium-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -10% -130px 40%;
+  height:220px;
+  background:radial-gradient(ellipse,rgba(203,158,63,.09),transparent 68%);
+  pointer-events:none;
+}
+.home-premium .home-premium-hero-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,.88fr) minmax(440px,1.12fr);
+  gap:58px;
+  align-items:center;
+}
+.home-premium .home-premium-hero-copy{
+  max-width:610px;
+}
+.home-premium .home-premium-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#e4bd69;
+  font-size:11px;
+  font-weight:850;
+  letter-spacing:.19em;
+  line-height:1.2;
+}
+.home-premium .home-premium-kicker::before{
+  content:"";
+  width:34px;
+  height:1px;
+  background:#c99a36;
+}
+.home-premium .home-premium-hero h1{
+  margin:18px 0 20px;
+  color:#fff!important;
+  font-family:Georgia,"Times New Roman",serif!important;
+  font-size:clamp(47px,5.3vw,76px);
+  line-height:.96;
+  letter-spacing:-.052em;
+  text-wrap:balance;
+}
+.home-premium .home-premium-hero h1 span{
+  color:#e1b65b;
+  -webkit-text-fill-color:#e1b65b;
+}
+.home-premium .home-premium-hero-copy>p{
+  max-width:590px;
+  margin:0;
+  color:#c7d1dc!important;
+  font-size:17px;
+  line-height:1.72;
+}
+.home-premium .home-premium-hero-actions{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+  margin-top:30px;
+}
+.home-premium .home-premium-hero-actions .btn{
+  min-height:48px;
+  padding:14px 22px!important;
+  border-radius:10px!important;
+  background:linear-gradient(135deg,#e0b75d,#c7902d)!important;
+  color:#07182a!important;
+  box-shadow:0 14px 32px rgba(201,154,54,.19)!important;
+}
+.home-premium .home-premium-whatsapp{
+  position:relative;
+  color:#f4f6f8!important;
+  font-size:14px;
+  font-weight:750;
+  text-decoration:none;
+  padding:10px 0;
+}
+.home-premium .home-premium-whatsapp::after{
+  content:"↗";
+  margin-left:7px;
+  color:#d9ad50;
+}
+.home-premium .home-premium-trust{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:0;
+  margin-top:34px;
+  padding-top:23px;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+.home-premium .home-premium-trust span{
+  min-width:0;
+  padding-right:15px;
+  color:#9facb9;
+  font-size:11px;
+  line-height:1.35;
+}
+.home-premium .home-premium-trust span+span{
+  padding-left:18px;
+  border-left:1px solid rgba(255,255,255,.10);
+}
+.home-premium .home-premium-trust strong{
+  display:block;
+  margin-bottom:3px;
+  color:#f1ca76;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:17px;
+  line-height:1;
+}
+.home-premium .home-premium-hero-visual{
+  position:relative;
+  margin:0;
+  border:1px solid rgba(218,180,100,.43);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 30px 90px rgba(0,0,0,.42),0 0 0 7px rgba(211,174,99,.025);
+}
+.home-premium .home-premium-hero-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 54%,rgba(2,10,18,.86) 100%);
+  pointer-events:none;
+}
+.home-premium .home-premium-hero-visual img{
+  display:block;
+  width:100%;
+  aspect-ratio:1.52/1;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.93) contrast(1.03);
+}
+.home-premium .home-premium-hero-visual figcaption{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:20px;
+  z-index:2;
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+  color:#fff;
+  font-size:13px;
+}
+.home-premium .home-premium-hero-visual figcaption strong{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:20px;
+  letter-spacing:-.02em;
+}
+.home-premium .home-premium-hero-visual figcaption span{
+  color:#e2bc68;
+  font-weight:750;
+}
+
+/* Why Waqi becomes a deliberate premium editorial section */
+.home-premium #why{
+  padding-top:78px!important;
+  padding-bottom:76px!important;
+  background:
+    radial-gradient(circle at 85% 18%,rgba(20,72,110,.17),transparent 25%),
+    linear-gradient(180deg,#051522 0%,#061a2d 100%)!important;
+}
+.home-premium #why .section-head{
+  max-width:680px;
+  margin-bottom:30px!important;
+}
+.home-premium #why .section-head h2{
+  margin:5px 0 12px;
+  font-size:clamp(35px,4vw,54px);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+.home-premium #why .section-head p{
+  color:#aebbc7!important;
+  font-size:16px;
+}
+.home-premium #why .why-135{
+  margin-top:34px!important;
+  margin-bottom:44px!important;
+}
+.home-premium #why .why-135-title{
+  font-size:clamp(29px,3.1vw,45px)!important;
+}
+.home-premium #why .why-number-group{
+  color:#e0b75d!important;
+}
+.home-premium #why .why-grid{
+  gap:15px!important;
+}
+.home-premium #why .why-card{
+  position:relative;
+  min-height:0!important;
+  padding:27px 27px 28px!important;
+  border-radius:16px!important;
+  background:linear-gradient(145deg,rgba(11,38,63,.86),rgba(4,20,34,.92))!important;
+  border:1px solid rgba(213,173,89,.20)!important;
+  box-shadow:0 15px 35px rgba(0,0,0,.15)!important;
+  overflow:hidden;
+}
+.home-premium #why .why-card::after{
+  content:"";
+  position:absolute;
+  right:-70px;
+  top:-70px;
+  width:145px;
+  height:145px;
+  border-radius:50%;
+  border:1px solid rgba(215,180,105,.08);
+  box-shadow:0 0 0 25px rgba(215,180,105,.018);
+  pointer-events:none;
+}
+.home-premium #why .why-card:hover{
+  border-color:rgba(225,183,91,.46)!important;
+  box-shadow:0 18px 44px rgba(0,0,0,.22)!important;
+}
+.home-premium #why .why-card h3{
+  margin:0 0 9px!important;
+  color:#f8fafb!important;
+  font-size:17px!important;
+  line-height:1.28!important;
+}
+.home-premium #why .why-card p{
+  color:#aebac6!important;
+  font-size:13.5px!important;
+  line-height:1.62!important;
+}
+.home-premium #why .why-number-badge,
+.home-premium #why .why-icon{
+  width:44px!important;
+  height:40px!important;
+  border-radius:10px!important;
+  margin-bottom:17px!important;
+  background:rgba(213,173,89,.08)!important;
+  border:1px solid rgba(213,173,89,.35)!important;
+  color:#e2bc68!important;
+  box-shadow:none!important;
+}
+
+/* Reuse the consultation artwork once — in the hero — and let the lower feature
+   become a clean comparison / conversion block instead of repeating the image. */
+.home-premium #why .why-consultation-feature{
+  display:block!important;
+  max-width:920px!important;
+  margin:52px auto 0!important;
+  padding:0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+.home-premium #why .why-consultation-feature figure{
+  display:none!important;
+}
+.home-premium #why .why-consultation-feature .consultation-copy{
+  position:relative;
+  max-width:none!important;
+  padding:36px 38px!important;
+  border:1px solid rgba(217,177,94,.30)!important;
+  border-radius:18px!important;
+  background:
+    radial-gradient(circle at 92% 14%,rgba(218,178,95,.10),transparent 24%),
+    linear-gradient(135deg,rgba(10,40,67,.92),rgba(4,18,31,.96))!important;
+  box-shadow:0 24px 60px rgba(0,0,0,.19)!important;
+}
+.home-premium #why .why-consultation-feature h2{
+  max-width:720px;
+  margin:8px 0 12px!important;
+  font-size:clamp(30px,3.7vw,48px)!important;
+  line-height:1.04!important;
+}
+.home-premium #why .why-consultation-feature .consultation-copy>p{
+  max-width:710px;
+  color:#b6c2cd!important;
+  font-size:15px!important;
+}
+.home-premium #why .broker-compare{
+  max-width:720px;
+  margin:25px 0 27px!important;
+}
+.home-premium #why .broker-compare>div{
+  border-color:rgba(255,255,255,.12)!important;
+  background:rgba(255,255,255,.035)!important;
+  color:#d7dfe7!important;
+}
+.home-premium #why .broker-compare .featured{
+  border-color:rgba(223,181,90,.48)!important;
+  background:rgba(213,173,89,.10)!important;
+  color:#fff!important;
+}
+.home-premium #why .broker-compare strong{
+  color:#fff!important;
+}
+.home-premium #why .broker-compare .featured strong{
+  color:#e4bd69!important;
+}
+.home-premium #why .why-consultation-feature .btn{
+  min-height:46px;
+}
+.home-premium .waqi-assurance-signature{
+  margin-top:48px!important;
+  padding-top:34px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.home-premium .waqi-assurance-signature p{
+  color:#f6f7f8!important;
+}
+
+/* Perspective + partner blocks: refined spacing and framing */
+.home-premium .waqi-perspective-section{
+  padding:72px 0!important;
+  background:
+    radial-gradient(circle at 82% 12%,rgba(201,154,54,.10),transparent 28%),
+    linear-gradient(135deg,#071b2f 0%,#0a2945 100%)!important;
+}
+.home-premium .waqi-perspective-wrap{
+  max-width:870px!important;
+}
+.home-premium .partner-showcase-section{
+  padding:68px 0 72px!important;
+  background:linear-gradient(180deg,#051522 0%,#03101c 100%)!important;
+  border-top:1px solid rgba(215,180,105,.10)!important;
+}
+.home-premium .partner-showcase-section:before{
+  color:#d8ae55!important;
+  font-size:10px!important;
+  letter-spacing:.19em!important;
+}
+.home-premium .why-partner-showcase{
+  max-width:900px!important;
+  margin:25px auto 0!important;
+}
+.home-premium .why-partner-showcase img{
+  width:100%;
+  box-shadow:0 28px 75px rgba(0,0,0,.30)!important;
+}
+
+/* Closing CTA: more like a premium conversion panel than a generic white box */
+.home-premium .quote{
+  padding:0 0 78px!important;
+  background:#03101c!important;
+}
+.home-premium .quote-box{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(218,180,100,.35)!important;
+  border-radius:20px!important;
+  padding:36px 40px!important;
+  background:
+    radial-gradient(circle at 90% 25%,rgba(215,180,105,.13),transparent 24%),
+    linear-gradient(135deg,#0a2947 0%,#07192b 62%,#06131f 100%)!important;
+  box-shadow:0 24px 65px rgba(0,0,0,.24)!important;
+}
+.home-premium .quote-box h2{
+  color:#fff!important;
+  font-size:clamp(30px,3vw,42px)!important;
+}
+.home-premium .quote-box p{
+  color:#b7c3cf!important;
+}
+.home-premium .quote-box .btn-dark{
+  background:rgba(255,255,255,.06)!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+}
+
+/* Tablet */
+@media (min-width:601px) and (max-width:1024px){
+  .home-premium .home-premium-hero{
+    padding:46px 0 50px;
+  }
+  .home-premium .home-premium-hero-grid{
+    grid-template-columns:.92fr 1.08fr;
+    gap:30px;
+  }
+  .home-premium .home-premium-hero h1{
+    font-size:clamp(40px,5.8vw,58px);
+  }
+  .home-premium .home-premium-hero-copy>p{
+    font-size:15px;
+    line-height:1.6;
+  }
+  .home-premium .home-premium-trust{
+    grid-template-columns:1fr;
+    gap:7px;
+    padding-top:16px;
+  }
+  .home-premium .home-premium-trust span,
+  .home-premium .home-premium-trust span+span{
+    display:flex;
+    align-items:baseline;
+    gap:7px;
+    padding:0;
+    border:0;
+  }
+  .home-premium .home-premium-trust strong{
+    display:inline;
+  }
+  .home-premium #why .why-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+
+/* Phone */
+@media (max-width:600px){
+  .home-premium .home-premium-hero{
+    padding:38px 0 34px;
+  }
+  .home-premium .home-premium-hero-grid{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+  }
+  .home-premium .home-premium-hero-copy{
+    max-width:none;
+  }
+  .home-premium .home-premium-kicker{
+    font-size:9px;
+    letter-spacing:.15em;
+  }
+  .home-premium .home-premium-kicker::before{
+    width:24px;
+  }
+  .home-premium .home-premium-hero h1{
+    margin:14px 0 15px;
+    font-size:clamp(39px,11vw,49px)!important;
+    line-height:.97!important;
+  }
+  .home-premium .home-premium-hero-copy>p{
+    font-size:14px;
+    line-height:1.58;
+  }
+  .home-premium .home-premium-hero-actions{
+    margin-top:23px;
+    gap:12px 16px;
+  }
+  .home-premium .home-premium-hero-actions .btn{
+    min-height:44px;
+    padding:12px 17px!important;
+  }
+  .home-premium .home-premium-whatsapp{
+    font-size:12px;
+  }
+  .home-premium .home-premium-trust{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0;
+    margin-top:25px;
+    padding-top:18px;
+  }
+  .home-premium .home-premium-trust span,
+  .home-premium .home-premium-trust span+span{
+    display:block;
+    padding:0 8px;
+    border-left:1px solid rgba(255,255,255,.09);
+    font-size:9px;
+  }
+  .home-premium .home-premium-trust span:first-child{
+    padding-left:0;
+    border-left:0;
+  }
+  .home-premium .home-premium-trust strong{
+    display:block;
+    font-size:14px;
+  }
+  .home-premium .home-premium-hero-visual{
+    width:100%;
+    border-radius:17px;
+  }
+  .home-premium .home-premium-hero-visual img{
+    aspect-ratio:1.34/1;
+    object-position:55% center;
+  }
+  .home-premium .home-premium-hero-visual figcaption{
+    left:16px;
+    right:16px;
+    bottom:14px;
+    display:block;
+  }
+  .home-premium .home-premium-hero-visual figcaption strong{
+    display:block;
+    font-size:17px;
+  }
+  .home-premium .home-premium-hero-visual figcaption span{
+    display:block;
+    margin-top:2px;
+    font-size:11px;
+  }
+  .home-premium #why{
+    padding-top:52px!important;
+    padding-bottom:54px!important;
+  }
+  .home-premium #why .section-head{
+    margin-bottom:22px!important;
+  }
+  .home-premium #why .section-head h2{
+    font-size:34px!important;
+  }
+  .home-premium #why .section-head p{
+    font-size:13px!important;
+  }
+  .home-premium #why .why-135{
+    margin:24px auto 29px!important;
+  }
+  .home-premium #why .why-135-title{
+    font-size:27px!important;
+  }
+  .home-premium #why .why-grid{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+  .home-premium #why .why-card{
+    padding:19px!important;
+    border-radius:13px!important;
+  }
+  .home-premium #why .why-card h3{
+    font-size:15px!important;
+  }
+  .home-premium #why .why-card p{
+    font-size:12px!important;
+    line-height:1.55!important;
+  }
+  .home-premium #why .why-number-badge,
+  .home-premium #why .why-icon{
+    width:38px!important;
+    height:36px!important;
+    margin-bottom:13px!important;
+  }
+  .home-premium #why .why-consultation-feature{
+    margin-top:32px!important;
+  }
+  .home-premium #why .why-consultation-feature .consultation-copy{
+    padding:24px 19px!important;
+    border-radius:14px!important;
+  }
+  .home-premium #why .why-consultation-feature h2{
+    font-size:30px!important;
+  }
+  .home-premium #why .broker-compare{
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+  .home-premium #why .broker-compare>b{
+    display:none!important;
+  }
+  .home-premium .waqi-assurance-signature{
+    margin-top:34px!important;
+    padding-top:27px;
+  }
+  .home-premium .waqi-perspective-section{
+    padding:49px 0!important;
+  }
+  .home-premium .partner-showcase-section{
+    padding:46px 0 50px!important;
+  }
+  .home-premium .quote{
+    padding:0 0 50px!important;
+  }
+  .home-premium .quote-box{
+    padding:26px 20px!important;
+    border-radius:15px!important;
+  }
+}
+
+
+/* =========================================================
+   V19.17 — PREMIUM ONTARIO ATMOSPHERE
+   Main public tabs only. Full-bleed image/comic sections are untouched.
+   ========================================================= */
+
+/* Homepage hero: no duplicate CTAs/stats; clear scroll affordance */
+.home-premium .home-premium-hero-copy{
+  position:relative;
+}
+.home-premium .home-premium-scroll-cue{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  gap:7px;
+  margin-top:31px;
+  color:rgba(237,242,247,.74);
+  text-decoration:none;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.22em;
+  transition:color .2s ease,transform .2s ease;
+}
+.home-premium .home-premium-scroll-cue:hover{
+  color:#e1b44f;
+  transform:translateY(2px);
+}
+.home-premium .home-premium-scroll-mouse{
+  width:24px;
+  height:36px;
+  border:1.5px solid rgba(225,180,79,.88);
+  border-radius:15px;
+  display:grid;
+  place-items:start center;
+  padding-top:7px;
+  box-shadow:0 0 22px rgba(225,180,79,.08);
+}
+.home-premium .home-premium-scroll-mouse i{
+  width:3px;
+  height:7px;
+  border-radius:3px;
+  background:#e1b44f;
+  animation:waqiScrollDot 1.6s ease-in-out infinite;
+}
+.home-premium .home-premium-scroll-cue b{
+  color:#e1b44f;
+  font-size:20px;
+  font-weight:400;
+  line-height:.65;
+  animation:waqiScrollArrow 1.6s ease-in-out infinite;
+}
+@keyframes waqiScrollDot{
+  0%,100%{transform:translateY(0);opacity:.45}
+  50%{transform:translateY(10px);opacity:1}
+}
+@keyframes waqiScrollArrow{
+  0%,100%{transform:translateY(0);opacity:.55}
+  50%{transform:translateY(4px);opacity:1}
+}
+
+/* Base scenic treatment: a very dark Ontario image living BEHIND navy content,
+   never replacing the existing dedicated image sections. */
+.home-premium #why,
+.home-premium .waqi-perspective-section,
+.home-premium .partner-showcase-section,
+.home-premium .quote,
+.page-auto .auto-coverage,
+.page-auto .auto-rate,
+.page-auto .recent-quotes-cta,
+.page-auto .auto-faq,
+.page-home .band,
+.page-home .quote,
+.page-home .auto-faq,
+.page-commercial .refresh-dark,
+.page-commercial .quote,
+.page-commercial .auto-faq,
+.page-travel .quote,
+.page-travel .auto-faq,
+.page-recent-quotes .rq-factors,
+.page-recent-quotes .rq-final-cta{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+
+.home-premium #why::before,
+.home-premium .waqi-perspective-section::before,
+.home-premium .partner-showcase-section::before,
+.home-premium .quote::before,
+.page-auto .auto-coverage::before,
+.page-auto .auto-rate::before,
+.page-auto .recent-quotes-cta::before,
+.page-auto .auto-faq::before,
+.page-home .band::before,
+.page-home .quote::before,
+.page-home .auto-faq::before,
+.page-commercial .refresh-dark::before,
+.page-commercial .quote::before,
+.page-commercial .auto-faq::before,
+.page-travel .quote::before,
+.page-travel .auto-faq::before,
+.page-recent-quotes .rq-factors::before,
+.page-recent-quotes .rq-final-cta::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  opacity:.105;
+  filter:saturate(.68) contrast(1.08) brightness(.55);
+  transform:scale(1.025);
+}
+
+/* Deep navy veil keeps text/cards dominant and gives the image a watermark feel. */
+.home-premium #why::after,
+.home-premium .waqi-perspective-section::after,
+.home-premium .partner-showcase-section::after,
+.home-premium .quote::after,
+.page-auto .auto-coverage::after,
+.page-auto .auto-rate::after,
+.page-auto .recent-quotes-cta::after,
+.page-auto .auto-faq::after,
+.page-home .band::after,
+.page-home .quote::after,
+.page-home .auto-faq::after,
+.page-commercial .refresh-dark::after,
+.page-commercial .quote::after,
+.page-commercial .auto-faq::after,
+.page-travel .quote::after,
+.page-travel .auto-faq::after,
+.page-recent-quotes .rq-factors::after,
+.page-recent-quotes .rq-final-cta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(70% 55% at 50% 100%, rgba(10,40,64,.20), transparent 76%),
+    linear-gradient(180deg,rgba(2,18,30,.90) 0%,rgba(2,18,30,.78) 44%,rgba(2,18,30,.94) 100%);
+}
+
+/* Page-specific Ontario imagery from existing approved page assets. */
+.home-premium #why::before,
+.home-premium .waqi-perspective-section::before,
+.home-premium .partner-showcase-section::before,
+.home-premium .quote::before,
+.page-recent-quotes .rq-factors::before,
+.page-recent-quotes .rq-final-cta::before{
+  background-image:url('../images/auto-final-8k.jpg');
+  background-position:20% 38%;
+}
+.page-auto .auto-coverage::before,
+.page-auto .auto-rate::before,
+.page-auto .recent-quotes-cta::before,
+.page-auto .auto-faq::before{
+  background-image:url('../images/auto-final-8k.jpg');
+  background-position:15% 40%;
+}
+.page-home .band::before,
+.page-home .quote::before,
+.page-home .auto-faq::before{
+  background-image:url('../images/home-final-8k.png');
+  background-position:center 52%;
+}
+.page-commercial .refresh-dark::before,
+.page-commercial .quote::before,
+.page-commercial .auto-faq::before{
+  background-image:url('../images/commercial-final-8k.jpg');
+  background-position:center 48%;
+}
+.page-travel .quote::before,
+.page-travel .auto-faq::before{
+  background-image:url('../images/travel-final-8k.jpg');
+  background-position:center 50%;
+}
+
+/* A little more depth on dark content surfaces without changing their content. */
+.home-premium #why .why-card,
+.home-premium #why .consultation-copy,
+.page-auto .auto-coverage .coverage-card,
+.page-home .band .card,
+.page-commercial .refresh-dark .card{
+  backdrop-filter:blur(1.5px);
+  -webkit-backdrop-filter:blur(1.5px);
+}
+
+@media (max-width: 600px){
+  .home-premium .home-premium-scroll-cue{
+    margin-top:23px;
+    font-size:8px;
+    letter-spacing:.19em;
+  }
+  .home-premium .home-premium-scroll-mouse{
+    width:22px;
+    height:33px;
+  }
+  .home-premium #why::before,
+  .home-premium .waqi-perspective-section::before,
+  .home-premium .partner-showcase-section::before,
+  .home-premium .quote::before,
+  .page-auto .auto-coverage::before,
+  .page-auto .auto-rate::before,
+  .page-auto .recent-quotes-cta::before,
+  .page-auto .auto-faq::before,
+  .page-home .band::before,
+  .page-home .quote::before,
+  .page-home .auto-faq::before,
+  .page-commercial .refresh-dark::before,
+  .page-commercial .quote::before,
+  .page-commercial .auto-faq::before,
+  .page-travel .quote::before,
+  .page-travel .auto-faq::before,
+  .page-recent-quotes .rq-factors::before,
+  .page-recent-quotes .rq-final-cta::before{
+    opacity:.085;
+    background-position:center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .home-premium .home-premium-scroll-mouse i,
+  .home-premium .home-premium-scroll-cue b{animation:none}
+}
+
+/* =========================================================
+   V19.20 — Premium motion polish (visual only)
+   Scroll reveals + restrained interaction. No layout/content changes.
+   ========================================================= */
+@media (prefers-reduced-motion: no-preference){
+  body.waqi-motion-ready .waqi-reveal{
+    opacity:0;
+    transform:translate3d(0,24px,0) !important;
+    filter:blur(2px);
+    transition:opacity .72s cubic-bezier(.22,.7,.2,1),
+               transform .72s cubic-bezier(.22,.7,.2,1),
+               filter .72s ease !important;
+    will-change:opacity,transform,filter;
+  }
+  body.waqi-motion-ready .waqi-reveal.waqi-reveal-soft{
+    transform:translate3d(0,16px,0) !important;
+  }
+  body.waqi-motion-ready .waqi-reveal.is-visible{
+    opacity:1;
+    transform:translate3d(0,0,0) !important;
+    filter:blur(0);
+  }
+  body.waqi-motion-ready .waqi-reveal-card{
+    opacity:0;
+    transform:translate3d(0,18px,0) scale(.992) !important;
+    transition:opacity .62s cubic-bezier(.22,.7,.2,1),
+               transform .62s cubic-bezier(.22,.7,.2,1),
+               box-shadow .22s ease,
+               border-color .22s ease !important;
+    will-change:opacity,transform;
+  }
+  body.waqi-motion-ready .waqi-reveal-card.is-visible{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1) !important;
+  }
+
+  /* Hero entrance: subtle and immediate, not a splash-screen effect. */
+  body.waqi-motion-ready .waqi-hero-enter{
+    animation:waqiHeroEnter .72s cubic-bezier(.22,.7,.2,1) both;
+  }
+  body.waqi-motion-ready .waqi-hero-enter.waqi-hero-enter-media{
+    animation-delay:.10s;
+  }
+  @keyframes waqiHeroEnter{
+    from{opacity:0;transform:translate3d(0,16px,0)}
+    to{opacity:1;transform:translate3d(0,0,0)}
+  }
+
+  /* Premium hover lift is desktop/pointer-only; touch layout never shifts. */
+  @media (hover:hover) and (pointer:fine) and (min-width:901px){
+    .why-card,
+    .coverage-grid>article,
+    .faq-grid>details,
+    .business-type,
+    .rq-card,
+    .why-consultation-feature,
+    .recent-quotes-cta-inner{
+      transition:transform .24s cubic-bezier(.22,.7,.2,1),
+                 box-shadow .24s ease,
+                 border-color .24s ease !important;
+    }
+    .why-card:hover,
+    .coverage-grid>article:hover,
+    .business-type:hover{
+      transform:translate3d(0,-4px,0) !important;
+    }
+    .faq-grid>details:hover{
+      transform:translate3d(0,-2px,0) !important;
+    }
+  }
+}
+
+/* Motion must never become a usability dependency. */
+@media (prefers-reduced-motion: reduce){
+  .waqi-reveal,.waqi-reveal-card,.waqi-hero-enter{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    animation:none!important;
+    transition:none!important;
+  }
+}
+
+/* =========================================================
+   V19.21 — CINEMATIC ONTARIO / PREMIUM DEPTH
+   Visual layer only. Existing content, forms and page logic untouched.
+   ========================================================= */
+:root{--waqi-scene-opacity:.52;--waqi-scene-veil:.62}
+
+/* Quote-tool favicon source is now used directly in page heads. */
+
+/* Background image layer MUST sit above section paint and below content. */
+.home-premium #why,
+.home-premium .waqi-perspective-section,
+.home-premium .partner-showcase-section,
+.home-premium .quote,
+.page-auto .auto-coverage,
+.page-auto .auto-rate,
+.page-auto .recent-quotes-cta,
+.page-auto .auto-faq,
+.page-home .band,
+.page-home .quote,
+.page-home .auto-faq,
+.page-commercial .refresh-dark,
+.page-commercial .quote,
+.page-commercial .auto-faq,
+.page-travel .quote,
+.page-travel .auto-faq{background:#06192c!important;color:#fff!important}
+
+.home-premium #why::before,.home-premium .waqi-perspective-section::before,.home-premium .partner-showcase-section::before,.home-premium .quote::before,
+.page-auto .auto-coverage::before,.page-auto .auto-rate::before,.page-auto .recent-quotes-cta::before,.page-auto .auto-faq::before,
+.page-home .band::before,.page-home .quote::before,.page-home .auto-faq::before,
+.page-commercial .refresh-dark::before,.page-commercial .quote::before,.page-commercial .auto-faq::before,
+.page-travel .quote::before,.page-travel .auto-faq::before{
+  z-index:0!important;opacity:var(--waqi-scene-opacity)!important;filter:saturate(.72) contrast(1.06) brightness(.58)!important;transform:scale(1.03);background-size:cover!important;background-repeat:no-repeat!important;
+}
+.home-premium #why::after,.home-premium .waqi-perspective-section::after,.home-premium .partner-showcase-section::after,.home-premium .quote::after,
+.page-auto .auto-coverage::after,.page-auto .auto-rate::after,.page-auto .recent-quotes-cta::after,.page-auto .auto-faq::after,
+.page-home .band::after,.page-home .quote::after,.page-home .auto-faq::after,
+.page-commercial .refresh-dark::after,.page-commercial .quote::after,.page-commercial .auto-faq::after,
+.page-travel .quote::after,.page-travel .auto-faq::after{
+  z-index:1!important;background:linear-gradient(180deg,rgba(3,17,31,.84),rgba(4,24,43,.60) 48%,rgba(3,17,31,.90))!important;
+}
+.home-premium #why > *,.home-premium .waqi-perspective-section > *,.home-premium .partner-showcase-section > *,.home-premium .quote > *,
+.page-auto .auto-coverage > *,.page-auto .auto-rate > *,.page-auto .recent-quotes-cta > *,.page-auto .auto-faq > *,
+.page-home .band > *,.page-home .quote > *,.page-home .auto-faq > *,
+.page-commercial .refresh-dark > *,.page-commercial .quote > *,.page-commercial .auto-faq > *,
+.page-travel .quote > *,.page-travel .auto-faq > *{position:relative;z-index:2}
+
+/* Each tab uses the approved Ontario visual language, segmented by section position. */
+.home-premium #why::before,.home-premium .waqi-perspective-section::before,.home-premium .partner-showcase-section::before,.home-premium .quote::before{background-image:url('../images/ontario-scenes/why-ontario.webp')!important}
+.home-premium #why::before{background-position:center 8%!important}.home-premium .waqi-perspective-section::before{background-position:center 45%!important}.home-premium .partner-showcase-section::before{background-position:center 72%!important}.home-premium .quote::before{background-position:center 96%!important}
+.page-auto .auto-coverage::before,.page-auto .auto-rate::before,.page-auto .recent-quotes-cta::before,.page-auto .auto-faq::before{background-image:url('../images/ontario-scenes/auto-ontario.webp')!important}
+.page-auto .auto-coverage::before{background-position:center 16%!important}.page-auto .auto-rate::before{background-position:center 44%!important}.page-auto .recent-quotes-cta::before{background-position:center 68%!important}.page-auto .auto-faq::before{background-position:center 92%!important}
+.page-home .band::before,.page-home .quote::before,.page-home .auto-faq::before{background-image:url('../images/ontario-scenes/home-ontario.webp')!important}
+.page-home .band::before{background-position:center 28%!important}.page-home .quote::before{background-position:center 62%!important}.page-home .auto-faq::before{background-position:center 90%!important}
+.page-commercial .refresh-dark::before,.page-commercial .quote::before,.page-commercial .auto-faq::before{background-image:url('../images/ontario-scenes/commercial-ontario.webp')!important}
+.page-commercial .refresh-dark::before{background-position:center 28%!important}.page-commercial .quote::before{background-position:center 61%!important}.page-commercial .auto-faq::before{background-position:center 90%!important}
+.page-travel .quote::before,.page-travel .auto-faq::before{background-image:url('../images/ontario-scenes/travel-ontario.webp')!important}
+.page-travel .quote::before{background-position:center 42%!important}.page-travel .auto-faq::before{background-position:center 82%!important}
+
+/* Typography on cinematic sections */
+.home-premium #why h2,.home-premium #why h3,.home-premium .waqi-perspective-section h2,.home-premium .partner-showcase-section h2,
+.page-auto .auto-coverage h2,.page-auto .auto-rate h2,.page-auto .auto-faq h2,
+.page-home .band h2,.page-home .auto-faq h2,.page-commercial .refresh-dark h2,.page-commercial .auto-faq h2,.page-travel .auto-faq h2{color:#fff!important}
+.home-premium #why p,.home-premium .waqi-perspective-section p,.page-auto .auto-coverage .auto-section-head p,.page-auto .auto-rate p,.page-auto .auto-faq .auto-section-head p,
+.page-home .band p,.page-home .auto-faq .auto-section-head p,.page-commercial .refresh-dark p,.page-commercial .auto-faq .auto-section-head p,.page-travel .auto-faq .auto-section-head p{color:#d6e0ea!important}
+
+/* Glass surfaces: crisp enough for readability, transparent enough to reveal the scene. */
+.home-premium #why .why-card,
+.page-auto .coverage-grid article,
+.page-auto .rate-list div,
+.page-auto .faq-grid details,
+.page-home .band .card,.page-home .faq-grid details,
+.page-commercial .refresh-card,.page-commercial .faq-grid details,
+.page-travel .faq-grid details{
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(247,249,252,.86))!important;
+  border:1px solid rgba(255,255,255,.35)!important;
+  box-shadow:0 18px 50px rgba(0,0,0,.14)!important;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.page-auto .rate-list div{border-bottom:1px solid rgba(255,255,255,.18)!important;background:rgba(255,255,255,.08)!important;box-shadow:none!important;backdrop-filter:blur(8px)}
+.page-auto .rate-list b{color:#fff!important}.page-auto .rate-list span{color:#d8e1eb!important}
+
+/* Premium section edges: prevents hard box-to-box transitions on long pages. */
+.home-premium #why,.home-premium .waqi-perspective-section,.home-premium .partner-showcase-section,.home-premium .quote,
+.page-auto .auto-coverage,.page-auto .auto-rate,.page-auto .recent-quotes-cta,.page-auto .auto-faq,
+.page-home .band,.page-home .quote,.page-home .auto-faq,
+.page-commercial .refresh-dark,.page-commercial .quote,.page-commercial .auto-faq,.page-travel .quote,.page-travel .auto-faq{
+  border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(0,0,0,.12)
+}
+
+/* CTA panels feel suspended rather than pasted on. */
+.quote-box,.recent-quotes-cta-inner{background:rgba(5,27,49,.76)!important;border:1px solid rgba(224,178,79,.30)!important;box-shadow:0 22px 70px rgba(0,0,0,.24)!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+
+/* Right-edge scroll progress: tiny, premium and non-interactive. */
+.waqi-scroll-progress{position:fixed;right:0;top:0;width:3px;height:0;z-index:30000;background:linear-gradient(180deg,#d6aa4b,#f0cf82);box-shadow:0 0 14px rgba(214,170,75,.35);pointer-events:none;transition:height .08s linear}
+
+/* Image/section reveal feels more cinematic than a generic fade. */
+@media (prefers-reduced-motion:no-preference){
+  .waqi-cinematic-enter{clip-path:inset(0 0 12% 0 round 10px);filter:blur(5px);transform:translateY(26px) scale(.985);opacity:0;transition:clip-path .85s cubic-bezier(.2,.8,.2,1),filter .75s ease,transform .85s cubic-bezier(.2,.8,.2,1),opacity .55s ease}
+  .waqi-cinematic-enter.is-visible{clip-path:inset(0 0 0 0 round 0);filter:blur(0);transform:none;opacity:1}
+  @media(min-width:901px){
+    .home-premium #why::before,.home-premium .waqi-perspective-section::before,.page-auto .auto-coverage::before,.page-auto .auto-rate::before,.page-home .band::before,.page-commercial .refresh-dark::before,.page-travel .quote::before{background-attachment:fixed!important}
+  }
+}
+@media(max-width:900px){:root{--waqi-scene-opacity:.46}.waqi-scroll-progress{width:2px}.home-premium #why::before,.home-premium .waqi-perspective-section::before,.home-premium .partner-showcase-section::before,.home-premium .quote::before,.page-auto .auto-coverage::before,.page-auto .auto-rate::before,.page-auto .recent-quotes-cta::before,.page-auto .auto-faq::before,.page-home .band::before,.page-home .quote::before,.page-home .auto-faq::before,.page-commercial .refresh-dark::before,.page-commercial .quote::before,.page-commercial .auto-faq::before,.page-travel .quote::before,.page-travel .auto-faq::before{background-attachment:scroll!important}}
+@media(max-width:600px){:root{--waqi-scene-opacity:.40}.quote-box,.recent-quotes-cta-inner{backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}}
+
+/* =========================================================
+   V19.22 — VISUAL CORRECTION PASS
+   Fixes: naked blue stretches, unreadable cards, All Perils icon,
+   and Why Waqi bottom CTA spacing. No content/form/logic changes.
+   ========================================================= */
+:root{
+  --waqi-scene-visible:.64;
+  --waqi-glass-dark:rgba(5,22,39,.82);
+  --waqi-glass-dark-2:rgba(8,31,53,.74);
+  --waqi-glass-border:rgba(255,255,255,.16);
+  --waqi-card-text:#f7f9fb;
+  --waqi-card-muted:#c9d4df;
+}
+
+/* ---------- 1) Continue the Ontario image language through previously bare sections ---------- */
+.page-auto #auto-path,
+.page-auto .story-section,
+.page-home #home-types,
+.page-home .story-section,
+.page-home #home-rebuild,
+.page-commercial #business-types,
+.page-commercial .story-section,
+.page-commercial #contractor-example,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote),
+.home-premium #why,
+.home-premium .waqi-perspective-section,
+.home-premium .partner-showcase-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#06192c!important;
+}
+
+.page-auto #auto-path::before,
+.page-auto .story-section::before,
+.page-home #home-types::before,
+.page-home .story-section::before,
+.page-home #home-rebuild::before,
+.page-commercial #business-types::before,
+.page-commercial .story-section::before,
+.page-commercial #contractor-example::before,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-size:cover;
+  opacity:var(--waqi-scene-visible);
+  filter:saturate(.72) contrast(1.08) brightness(.58);
+  transform:scale(1.025);
+}
+.page-auto #auto-path::after,
+.page-auto .story-section::after,
+.page-home #home-types::after,
+.page-home .story-section::after,
+.page-home #home-rebuild::after,
+.page-commercial #business-types::after,
+.page-commercial .story-section::after,
+.page-commercial #contractor-example::after,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote)::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,16,29,.72),rgba(4,24,42,.50) 46%,rgba(3,16,29,.78));
+}
+.page-auto #auto-path > *,
+.page-auto .story-section > *,
+.page-home #home-types > *,
+.page-home .story-section > *,
+.page-home #home-rebuild > *,
+.page-commercial #business-types > *,
+.page-commercial .story-section > *,
+.page-commercial #contractor-example > *,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote) > *{
+  position:relative;
+  z-index:2;
+}
+
+/* Page-specific scene positions: deliberate scene changes rather than repeated center crops. */
+.page-auto #auto-path::before{background-image:url('../images/ontario-scenes/auto-ontario.webp');background-position:center 4%}
+.page-auto .story-section::before{background-image:url('../images/ontario-scenes/auto-ontario.webp');background-position:center 28%}
+.page-home #home-types::before{background-image:url('../images/ontario-scenes/home-ontario.webp');background-position:center 7%}
+.page-home .story-section::before{background-image:url('../images/ontario-scenes/home-ontario.webp');background-position:center 35%}
+.page-home #home-rebuild::before{background-image:url('../images/ontario-scenes/home-ontario.webp');background-position:center 75%}
+.page-commercial #business-types::before{background-image:url('../images/ontario-scenes/commercial-ontario.webp');background-position:center 8%}
+.page-commercial .story-section::before{background-image:url('../images/ontario-scenes/commercial-ontario.webp');background-position:center 38%}
+.page-commercial #contractor-example::before{background-image:url('../images/ontario-scenes/commercial-ontario.webp');background-position:center 75%}
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote):first-of-type::before{background-image:url('../images/ontario-scenes/travel-ontario.webp');background-position:center 10%}
+.page-travel .story-section::before{background-image:url('../images/ontario-scenes/travel-ontario.webp')!important;background-position:center 45%!important}
+
+/* Make already-added scenic sections visibly scenic, without harming readability. */
+.home-premium #why::before,
+.home-premium .waqi-perspective-section::before,
+.home-premium .partner-showcase-section::before,
+.home-premium .quote::before,
+.page-auto .auto-coverage::before,
+.page-auto .auto-rate::before,
+.page-auto .recent-quotes-cta::before,
+.page-auto .auto-faq::before,
+.page-home .band::before,
+.page-home .quote::before,
+.page-home .auto-faq::before,
+.page-commercial .refresh-dark::before,
+.page-commercial .quote::before,
+.page-commercial .auto-faq::before,
+.page-travel .quote::before,
+.page-travel .auto-faq::before{
+  opacity:.66!important;
+  filter:saturate(.76) contrast(1.08) brightness(.62)!important;
+}
+.home-premium #why::after,
+.home-premium .waqi-perspective-section::after,
+.home-premium .partner-showcase-section::after,
+.home-premium .quote::after,
+.page-auto .auto-coverage::after,
+.page-auto .auto-rate::after,
+.page-auto .recent-quotes-cta::after,
+.page-auto .auto-faq::after,
+.page-home .band::after,
+.page-home .quote::after,
+.page-home .auto-faq::after,
+.page-commercial .refresh-dark::after,
+.page-commercial .quote::after,
+.page-commercial .auto-faq::after,
+.page-travel .quote::after,
+.page-travel .auto-faq::after{
+  background:linear-gradient(180deg,rgba(3,16,29,.70),rgba(4,24,42,.46) 48%,rgba(3,16,29,.76))!important;
+}
+
+/* Headings/body copy on newly darkened scenic sections. */
+.page-auto #auto-path h2,.page-auto .story-section h2,
+.page-home #home-types h2,.page-home .story-section h2,.page-home #home-rebuild h2,
+.page-commercial #business-types h2,.page-commercial .story-section h2,.page-commercial #contractor-example h2,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote) h2{color:#fff!important}
+.page-auto #auto-path p,.page-auto .story-section p,
+.page-home #home-types p,.page-home .story-section p,.page-home #home-rebuild p,
+.page-commercial #business-types p,.page-commercial .story-section p,.page-commercial #contractor-example p,
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote) p{color:#d5dfe8!important}
+
+/* ---------- 2/5/7) Rebuild problematic cards as high-contrast dark glass ---------- */
+.page-auto .coverage-grid > article,
+.page-commercial .refresh-dark .refresh-card,
+.home-premium #why .why-card,
+.page-commercial #business-types .business-type,
+.page-travel .travel-grid .refresh-card,
+.page-auto #auto-path .refresh-card{
+  background:linear-gradient(145deg,var(--waqi-glass-dark),var(--waqi-glass-dark-2))!important;
+  border:1px solid var(--waqi-glass-border)!important;
+  box-shadow:0 22px 56px rgba(0,0,0,.24)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+}
+.page-auto .coverage-grid > article h3,
+.page-commercial .refresh-dark .refresh-card h3,
+.home-premium #why .why-card h3,
+.page-commercial #business-types .business-type strong,
+.page-travel .travel-grid .refresh-card h3,
+.page-auto #auto-path .refresh-card h3{
+  color:var(--waqi-card-text)!important;
+  -webkit-text-fill-color:var(--waqi-card-text)!important;
+}
+.page-auto .coverage-grid > article p,
+.page-commercial .refresh-dark .refresh-card p,
+.home-premium #why .why-card p,
+.page-commercial #business-types .business-type span,
+.page-travel .travel-grid .refresh-card p,
+.page-auto #auto-path .refresh-card p{
+  color:var(--waqi-card-muted)!important;
+  -webkit-text-fill-color:var(--waqi-card-muted)!important;
+}
+.home-premium #why .why-number-badge,
+.home-premium #why .why-icon{
+  background:rgba(225,180,79,.12)!important;
+  color:#efd28d!important;
+  border:1px solid rgba(225,180,79,.32)!important;
+}
+
+/* Contractor explanatory panel: readable on image. */
+.page-commercial #contractor-example .panel{
+  background:rgba(6,24,42,.84)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  box-shadow:0 20px 54px rgba(0,0,0,.24)!important;
+  backdrop-filter:blur(10px);
+}
+.page-commercial #contractor-example .panel h3{color:#fff!important}
+.page-commercial #contractor-example .panel p{color:#cbd7e1!important}
+
+/* ---------- 3) All Perils icon: visible, simple, intentional ---------- */
+.coverage-all-perils-icon{
+  width:52px!important;
+  height:52px!important;
+  display:inline-grid!important;
+  place-items:center!important;
+  border-radius:14px!important;
+  background:rgba(225,180,79,.11)!important;
+  border:1px solid rgba(225,180,79,.34)!important;
+  margin:0 0 2px 0!important;
+}
+.coverage-all-perils-icon svg{width:38px!important;height:38px!important;display:block!important;overflow:visible!important}
+.coverage-all-perils-icon .ap-shield{
+  fill:rgba(225,180,79,.08)!important;
+  stroke:#e7bd65!important;
+  stroke-width:2.6!important;
+  stroke-linejoin:round!important;
+}
+.coverage-all-perils-icon .ap-car{
+  fill:none!important;
+  stroke:#f4f7fa!important;
+  stroke-width:2.35!important;
+  stroke-linecap:round!important;
+  stroke-linejoin:round!important;
+}
+.coverage-all-perils-icon .ap-wheel{fill:#e7bd65!important;stroke:none!important}
+
+/* Comic cards stay the visual hero of their sections. */
+.story-section .comic-situation-card{
+  box-shadow:0 26px 74px rgba(0,0,0,.34)!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+}
+.story-section .comic-feature-kicker,.story-section .comic-note-title{color:#efd28d!important}
+
+/* ---------- 9) Keep Why CTA, but place it lower in its final band ---------- */
+.home-premium .quote{padding-top:110px!important;padding-bottom:54px!important}
+.home-premium .quote .quote-box{transform:translateY(56px)}
+
+/* Mobile/tablet: preserve image presence without turning backgrounds noisy. */
+@media(max-width:900px){
+  :root{--waqi-scene-visible:.58}
+  .page-auto #auto-path::before,.page-auto .story-section::before,
+  .page-home #home-types::before,.page-home .story-section::before,.page-home #home-rebuild::before,
+  .page-commercial #business-types::before,.page-commercial .story-section::before,.page-commercial #contractor-example::before,
+  .page-travel main > section:not(.waqi-fullbleed-hero):not(.quote)::before{
+    background-attachment:scroll!important;
+    background-position:center!important;
+  }
+  .home-premium .quote{padding-top:82px!important;padding-bottom:44px!important}
+  .home-premium .quote .quote-box{transform:translateY(22px)}
+}
+@media(max-width:600px){
+  :root{--waqi-scene-visible:.54}
+  .page-auto .coverage-grid > article,
+  .page-commercial .refresh-dark .refresh-card,
+  .home-premium #why .why-card,
+  .page-commercial #business-types .business-type,
+  .page-travel .travel-grid .refresh-card,
+  .page-auto #auto-path .refresh-card{backdrop-filter:blur(8px)!important;-webkit-backdrop-filter:blur(8px)!important}
+}
+
+/* =========================================================
+   V19.23 — HI-RES SCENES + RESPONSIVE VISUAL CLEANUP
+   Keeps content/logic intact; improves image quality and removes load-like motion.
+   ========================================================= */
+
+/* Responsive source set: mobile is intentionally smaller for speed, desktop is 4096px wide. */
+:root{
+  --scene-auto:url('../images/ontario-scenes-hires/auto-ontario-mobile.jpg');
+  --scene-home:url('../images/ontario-scenes-hires/home-ontario-mobile.jpg');
+  --scene-commercial:url('../images/ontario-scenes-hires/commercial-ontario-mobile.jpg');
+  --scene-travel:url('../images/ontario-scenes-hires/travel-ontario-mobile.jpg');
+  --scene-why:url('../images/ontario-scenes-hires/why-ontario-mobile.jpg');
+}
+@media (min-width:601px){
+  :root{
+    --scene-auto:url('../images/ontario-scenes-hires/auto-ontario-tablet.jpg');
+    --scene-home:url('../images/ontario-scenes-hires/home-ontario-tablet.jpg');
+    --scene-commercial:url('../images/ontario-scenes-hires/commercial-ontario-tablet.jpg');
+    --scene-travel:url('../images/ontario-scenes-hires/travel-ontario-tablet.jpg');
+    --scene-why:url('../images/ontario-scenes-hires/why-ontario-tablet.jpg');
+  }
+}
+@media (min-width:1200px){
+  :root{
+    --scene-auto:url('../images/ontario-scenes-hires/auto-ontario-desktop.jpg');
+    --scene-home:url('../images/ontario-scenes-hires/home-ontario-desktop.jpg');
+    --scene-commercial:url('../images/ontario-scenes-hires/commercial-ontario-desktop.jpg');
+    --scene-travel:url('../images/ontario-scenes-hires/travel-ontario-desktop.jpg');
+    --scene-why:url('../images/ontario-scenes-hires/why-ontario-desktop.jpg');
+  }
+}
+
+/* Replace every long-page Ontario scene with the higher-quality source. */
+.page-auto #auto-path::before,
+.page-auto .story-section::before,
+.page-auto .auto-coverage::before,
+.page-auto .auto-rate::before,
+.page-auto .recent-quotes-cta::before,
+.page-auto .auto-faq::before{background-image:var(--scene-auto)!important}
+
+.page-home #home-types::before,
+.page-home .story-section::before,
+.page-home #home-rebuild::before,
+.page-home .band::before,
+.page-home .quote::before,
+.page-home .auto-faq::before{background-image:var(--scene-home)!important}
+
+.page-commercial #business-types::before,
+.page-commercial .story-section::before,
+.page-commercial #contractor-example::before,
+.page-commercial .refresh-dark::before,
+.page-commercial .quote::before,
+.page-commercial .auto-faq::before{background-image:var(--scene-commercial)!important}
+
+.page-travel main > section:not(.waqi-fullbleed-hero):not(.quote)::before,
+.page-travel .story-section::before,
+.page-travel .quote::before,
+.page-travel .auto-faq::before{background-image:var(--scene-travel)!important}
+
+.home-premium #why::before,
+.home-premium .waqi-perspective-section::before,
+.home-premium .partner-showcase-section::before,
+.home-premium .quote::before{background-image:var(--scene-why)!important}
+
+/* Travel: the first three cards were sitting on plain navy because the first generic section
+   was not winning the earlier :first-of-type selector. Give that exact section its scene. */
+.page-travel main > section:nth-of-type(2){
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  background:#06192c!important;
+}
+.page-travel main > section:nth-of-type(2)::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background-image:var(--scene-travel)!important;
+  background-position:center 12%!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  opacity:.72!important;
+  filter:saturate(.78) contrast(1.08) brightness(.64)!important;
+  transform:scale(1.02);
+}
+.page-travel main > section:nth-of-type(2)::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,16,29,.60),rgba(4,24,42,.38) 48%,rgba(3,16,29,.68))!important;
+}
+.page-travel main > section:nth-of-type(2) > *{position:relative;z-index:2}
+
+/* Why Waqi: ensure Broader Perspective actually reads as part of the Ontario visual journey. */
+.home-premium .waqi-perspective-section::before{
+  opacity:.74!important;
+  filter:saturate(.76) contrast(1.08) brightness(.64)!important;
+  background-position:center 48%!important;
+}
+.home-premium .waqi-perspective-section::after{
+  background:linear-gradient(180deg,rgba(3,16,29,.58),rgba(4,24,42,.38) 50%,rgba(3,16,29,.66))!important;
+}
+
+/* Phone-only quick service row: hard guard so it can never leak onto desktop/tablet. */
+@media (min-width:601px){
+  .waqi-mobile-service-nav{display:none!important;visibility:hidden!important;height:0!important;padding:0!important;margin:0!important;border:0!important;overflow:hidden!important}
+}
+
+/* Ready-to-compare: center the box vertically in its band instead of pushing it too low. */
+.home-premium .quote{
+  min-height:290px!important;
+  padding:58px 0!important;
+  display:flex!important;
+  align-items:center!important;
+}
+.home-premium .quote > .wrap{width:100%}
+.home-premium .quote .quote-box{transform:none!important;margin:0 auto!important}
+@media(max-width:600px){
+  .home-premium .quote{min-height:250px!important;padding:44px 0!important}
+}
+
+/* Motion: keep polish, remove the "page is still loading" illusion.
+   Content is immediately visible; only tiny movement remains on cards. */
+@media (prefers-reduced-motion:no-preference){
+  body.waqi-motion-ready .waqi-reveal{
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    transition:none!important;
+    will-change:auto!important;
+  }
+  body.waqi-motion-ready .waqi-reveal-card{
+    opacity:1!important;
+    filter:none!important;
+    transform:translate3d(0,6px,0) scale(.998)!important;
+    transition:transform .30s cubic-bezier(.22,.7,.2,1),box-shadow .22s ease,border-color .22s ease!important;
+  }
+  body.waqi-motion-ready .waqi-reveal-card.is-visible{transform:none!important}
+  body.waqi-motion-ready .waqi-hero-enter{animation-duration:.38s!important}
+}
+
+/* Restore a deliberate white + gold hierarchy. Gold is accent, not body-copy colour. */
+.eyebrow,
+.comic-feature-kicker,
+.comic-note-title,
+.waqi-perspective-eyebrow,
+.home-premium .why-prefix,
+.home-premium .why-suffix,
+.home-premium .num-anchor,
+.home-premium .why-number-badge,
+.home-premium .why-icon{
+  color:#E8C687!important;
+  -webkit-text-fill-color:#E8C687!important;
+}
+.home-premium .waqi-assurance-signature p{color:#f5f7fa!important;-webkit-text-fill-color:#f5f7fa!important}
+.home-premium .waqi-assurance-signature span{
+  color:#E8C687!important;
+  -webkit-text-fill-color:#E8C687!important;
+  font-style:italic!important;
+}
+/* Small gold editorial rule reinforces the brand without turning headings yellow. */
+.home-premium .waqi-perspective-section h2::after,
+.page-auto .auto-section-head h2::after,
+.page-home .section-head h2::after,
+.page-commercial .section-head h2::after,
+.page-travel .section-head h2::after{
+  content:"";
+  display:block;
+  width:44px;
+  height:2px;
+  margin-top:12px;
+  border-radius:999px;
+  background:#C99A36;
+  opacity:.9;
+}
+
+/* =========================================================
+   V19.24 — INSTANT RENDER + CONTINUOUS SCENIC BACKGROUNDS
+   ========================================================= */
+.waqi-reveal,.waqi-reveal-soft,.waqi-reveal-card,.waqi-cinematic-enter,
+.waqi-hero-enter,.waqi-hero-enter-media,
+body.waqi-motion-ready .waqi-reveal,
+body.waqi-motion-ready .waqi-reveal-card,
+body.waqi-motion-ready .waqi-cinematic-enter{
+  opacity:1!important;transform:none!important;filter:none!important;
+  transition-delay:0s!important;animation:none!important;will-change:auto!important;
+}
+body.page-entering,body.page-leaving{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+
+.page-auto main,.page-home main,.page-commercial main,.page-travel main,.home-premium main{
+  position:relative;background-color:#06192c;background-repeat:no-repeat;
+  background-position:center top;background-size:cover;background-attachment:scroll!important;
+}
+.page-auto main{background-image:linear-gradient(rgba(3,16,29,.48),rgba(3,16,29,.60)),var(--scene-auto)}
+.page-home main{background-image:linear-gradient(rgba(3,16,29,.46),rgba(3,16,29,.60)),var(--scene-home)}
+.page-commercial main{background-image:linear-gradient(rgba(3,16,29,.50),rgba(3,16,29,.62)),var(--scene-commercial)}
+.page-travel main{background-image:linear-gradient(rgba(3,16,29,.46),rgba(3,16,29,.60)),var(--scene-travel)}
+.home-premium main{background-image:linear-gradient(rgba(3,16,29,.48),rgba(3,16,29,.62)),var(--scene-why)}
+
+.page-auto .waqi-fullbleed-hero,.page-home .waqi-fullbleed-hero,
+.page-commercial .waqi-fullbleed-hero,.page-travel .waqi-fullbleed-hero,
+.home-premium .home-premium-hero{background-image:var(--hero-bg)!important}
+
+.page-auto main > section:not(.waqi-fullbleed-hero)::before,
+.page-home main > section:not(.waqi-fullbleed-hero)::before,
+.page-commercial main > section:not(.waqi-fullbleed-hero)::before,
+.page-travel main > section:not(.waqi-fullbleed-hero)::before,
+.home-premium main > section:not(.home-premium-hero)::before{
+  background-image:none!important;opacity:0!important;filter:none!important;transform:none!important;
+}
+.page-auto main > section:not(.waqi-fullbleed-hero),
+.page-home main > section:not(.waqi-fullbleed-hero),
+.page-commercial main > section:not(.waqi-fullbleed-hero),
+.page-travel main > section:not(.waqi-fullbleed-hero),
+.home-premium main > section:not(.home-premium-hero){
+  background-color:rgba(4,24,42,.30)!important;background-image:none!important;
+  border-top-color:transparent!important;border-bottom-color:transparent!important;
+}
+.story-section{background:rgba(3,16,29,.34)!important}
+.story-section::after{background:linear-gradient(180deg,rgba(3,16,29,.10),rgba(3,16,29,.24))!important}
+.page-subnav{position:relative;z-index:5}
+
+.page-auto .coverage-grid > article,.page-auto #auto-path .refresh-card,
+.page-home .refresh-card,.page-home .coverage-card,
+.page-commercial .refresh-card,.page-commercial .business-type,
+.page-travel .refresh-card,.home-premium .why-card,.faq-grid details{
+  background:rgba(7,28,48,.82)!important;border-color:rgba(255,255,255,.14)!important;
+  backdrop-filter:blur(7px)!important;-webkit-backdrop-filter:blur(7px)!important;
+}
+@media(max-width:900px){
+  .page-auto main,.page-home main,.page-commercial main,.page-travel main,.home-premium main{
+    background-size:auto 100%;background-position:center top;
+  }
+}
+
+/* =========================================================
+   V19.25 — REGRESSION FIX / INSTANT PAINT / CONTINUOUS SCENES
+   Targeted only at the reported visual regressions.
+   ========================================================= */
+
+/* 0) Absolutely no content reveal/load illusion. Everything paints immediately. */
+html,body,main,main section,.auto-faq,.faq-grid,.faq-grid details,
+.refresh-card,.coverage-grid>article,.business-type,.why-card,.quote-box,
+.comic-situation-card,.comic-situation-card img{
+  animation:none!important;
+  animation-delay:0s!important;
+  transition-delay:0s!important;
+}
+.waqi-reveal,.waqi-reveal-soft,.waqi-reveal-card,.waqi-cinematic-enter,
+.waqi-hero-enter,.waqi-hero-enter-media,
+body.waqi-motion-ready .waqi-reveal,body.waqi-motion-ready .waqi-reveal-card,
+body.waqi-motion-ready .waqi-cinematic-enter{
+  opacity:1!important;visibility:visible!important;transform:none!important;
+  filter:none!important;clip-path:none!important;transition:none!important;
+  animation:none!important;will-change:auto!important;
+}
+
+/* Avoid GPU blur paint-in on content cards. Solid/translucent surfaces are immediate. */
+.page-auto .coverage-grid>article,.page-auto #auto-path .refresh-card,
+.page-home .refresh-card,.page-home .coverage-card,
+.page-commercial .refresh-card,.page-commercial .business-type,
+.page-travel .refresh-card,.home-premium .why-card,
+.faq-grid details,.quote-box,.recent-quotes-cta-inner{
+  backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+}
+
+/* 1/3/5/7/8) Reported naked navy sections: let the ONE continuous page scene show through. */
+.page-auto #auto-path,
+.page-home #home-types,
+.page-commercial #business-types,
+.page-travel main>section:nth-of-type(2),
+.page-travel .story-section,
+.home-premium #why,
+.home-premium .waqi-perspective-section{
+  background:rgba(4,24,42,.16)!important;
+  background-image:none!important;
+  border-top:0!important;border-bottom:0!important;
+}
+.page-auto #auto-path::before,.page-auto #auto-path::after,
+.page-home #home-types::before,.page-home #home-types::after,
+.page-commercial #business-types::before,.page-commercial #business-types::after,
+.page-travel main>section:nth-of-type(2)::before,.page-travel main>section:nth-of-type(2)::after,
+.page-travel .story-section::before,.page-travel .story-section::after,
+.home-premium #why::before,.home-premium #why::after,
+.home-premium .waqi-perspective-section::before,.home-premium .waqi-perspective-section::after{
+  content:none!important;display:none!important;background:none!important;
+}
+
+/* Keep continuous scenic background visible through all public content bands. */
+.page-auto main>section:not(.waqi-fullbleed-hero),
+.page-home main>section:not(.waqi-fullbleed-hero),
+.page-commercial main>section:not(.waqi-fullbleed-hero),
+.page-travel main>section:not(.waqi-fullbleed-hero),
+.home-premium main>section:not(.home-premium-hero){
+  background-color:rgba(4,24,42,.18)!important;
+  box-shadow:none!important;
+}
+
+/* 2/4/6) FAQs: scene and cards are present on first paint, no white flash or delayed blur. */
+.page-auto .auto-faq,.page-home .auto-faq,.page-commercial .auto-faq,.page-travel .auto-faq{
+  position:relative!important;isolation:isolate!important;overflow:hidden!important;
+  background-color:#06192c!important;background-repeat:no-repeat!important;
+  background-size:cover!important;background-position:center bottom!important;
+  border-top:0!important;
+}
+.page-auto .auto-faq{background-image:linear-gradient(rgba(3,16,29,.58),rgba(3,16,29,.72)),var(--scene-auto)!important}
+.page-home .auto-faq{background-image:linear-gradient(rgba(3,16,29,.58),rgba(3,16,29,.72)),var(--scene-home)!important}
+.page-commercial .auto-faq{background-image:linear-gradient(rgba(3,16,29,.58),rgba(3,16,29,.72)),var(--scene-commercial)!important}
+.page-travel .auto-faq{background-image:linear-gradient(rgba(3,16,29,.58),rgba(3,16,29,.72)),var(--scene-travel)!important}
+.page-auto .auto-faq::before,.page-auto .auto-faq::after,
+.page-home .auto-faq::before,.page-home .auto-faq::after,
+.page-commercial .auto-faq::before,.page-commercial .auto-faq::after,
+.page-travel .auto-faq::before,.page-travel .auto-faq::after{content:none!important;display:none!important}
+.faq-grid details{
+  opacity:1!important;visibility:visible!important;transform:none!important;
+  background:#f8fafc!important;border:1px solid rgba(214,224,234,.96)!important;
+  box-shadow:0 8px 24px rgba(0,0,0,.14)!important;
+  transition:none!important;
+}
+.faq-grid summary{color:#132840!important;-webkit-text-fill-color:#132840!important}
+.faq-grid p{color:#526275!important;-webkit-text-fill-color:#526275!important}
+.auto-faq .auto-section-head h2{color:#fff!important}
+.auto-faq .auto-section-head p{color:#d7e0e8!important}
+
+/* Why Waqi desktop/tablet hero copy must not look like a mobile column. */
+@media(min-width:901px){
+  .home-premium-hero-grid{grid-template-columns:minmax(0,1.18fr) minmax(420px,.82fr)!important;gap:54px!important}
+  .home-premium-hero-copy{max-width:780px!important;width:100%!important}
+  .home-premium-hero-copy h1{max-width:760px!important}
+  .home-premium-hero-copy>p{max-width:700px!important}
+}
+@media(min-width:601px) and (max-width:900px){
+  .home-premium-hero-copy{max-width:720px!important;width:92%!important;margin-left:auto!important;margin-right:auto!important}
+  .home-premium-hero-copy h1,.home-premium-hero-copy>p{max-width:680px!important}
+}
+
+/* More deliberate Waqi navy/gold typography balance while preserving white readability. */
+.gold,.eyebrow,.refresh-kicker,.comic-feature-kicker,.comic-note-title,
+.waqi-perspective-eyebrow,.home-premium-kicker,
+.home-premium .why-prefix,.home-premium .why-suffix,
+.home-premium .num-anchor,.home-premium .why-number-badge,
+.home-premium .why-icon,.coverage-grid>article h3,
+.page-commercial .refresh-card h3,.page-commercial .business-type strong,
+.page-travel .refresh-card h3,.page-home .refresh-card h3{
+  color:#E8C687!important;-webkit-text-fill-color:#E8C687!important;
+}
+.faq-grid summary::marker{color:#C99A36!important}
+.home-premium .waqi-assurance-signature p{color:#f7f9fb!important;-webkit-text-fill-color:#f7f9fb!important}
+.home-premium .waqi-assurance-signature span{
+  color:#E8C687!important;-webkit-text-fill-color:#E8C687!important;
+  font-style:italic!important;
+}
+
+/* Scroll cue belongs at the END of Why clients choose Waqi, to signal more content below. */
+.home-premium-hero .home-premium-scroll-cue{display:none!important}
+.home-premium #why .why-section-scroll-cue{
+  display:flex!important;position:relative!important;left:auto!important;right:auto!important;
+  bottom:auto!important;top:auto!important;transform:none!important;
+  width:max-content!important;margin:42px auto 4px!important;
+  align-items:center!important;justify-content:center!important;gap:9px!important;
+  color:#E8C687!important;-webkit-text-fill-color:#E8C687!important;
+  z-index:4!important;
+}
+.home-premium #why .why-section-scroll-cue:hover{transform:translateY(2px)!important}
+@media(max-width:600px){.home-premium #why .why-section-scroll-cue{margin-top:30px!important}}
+
+/* Ready-to-compare remains vertically centered. */
+.home-premium .quote{display:flex!important;align-items:center!important;min-height:290px!important;padding:52px 0!important}
+.home-premium .quote>.wrap{width:100%!important}
+.home-premium .quote .quote-box{transform:none!important;margin:auto!important}
+
+/* =========================================================
+   V19.26 — TARGETED SCENE RESTORE + WHY HERO STRUCTURE FIX
+   No content/form logic changes. Restore scenic image presence where
+   V19.24/V19.25 overrides had disabled section pseudo backgrounds.
+   ========================================================= */
+
+/* Slightly darker overall scenic treatment: retain image detail, reduce visual noise. */
+.page-auto main{
+  background-image:linear-gradient(rgba(3,16,29,.56),rgba(3,16,29,.68)),var(--scene-auto)!important;
+}
+.page-home main{
+  background-image:linear-gradient(rgba(3,16,29,.54),rgba(3,16,29,.68)),var(--scene-home)!important;
+}
+.page-commercial main{
+  background-image:linear-gradient(rgba(3,16,29,.58),rgba(3,16,29,.70)),var(--scene-commercial)!important;
+}
+.page-travel main{
+  background-image:linear-gradient(rgba(3,16,29,.54),rgba(3,16,29,.68)),var(--scene-travel)!important;
+}
+.home-premium main{
+  background-image:linear-gradient(rgba(3,16,29,.56),rgba(3,16,29,.70)),var(--scene-why)!important;
+}
+
+/* Re-enable the exact scenic bands that were showing as plain navy.
+   Soft masks remove hard top/bottom divider lines. */
+.page-home #home-rebuild,
+.page-commercial #contractor-example,
+.page-travel main > section:not(.waqi-fullbleed-hero),
+.home-premium #why,
+.home-premium .waqi-perspective-section{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  background-color:rgba(4,24,42,.12)!important;
+}
+
+.page-home #home-rebuild::before,
+.page-commercial #contractor-example::before,
+.page-travel main > section:not(.waqi-fullbleed-hero)::before,
+.home-premium #why::before,
+.home-premium .waqi-perspective-section::before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:-3% 0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  opacity:.82!important;
+  background-repeat:no-repeat!important;
+  background-size:cover!important;
+  filter:saturate(.72) contrast(1.07) brightness(.52)!important;
+  transform:scale(1.015)!important;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 90%,transparent 100%)!important;
+  mask-image:linear-gradient(to bottom,transparent 0%,#000 10%,#000 90%,transparent 100%)!important;
+}
+.page-home #home-rebuild::before{background-image:var(--scene-home)!important;background-position:center 74%!important}
+.page-commercial #contractor-example::before{background-image:var(--scene-commercial)!important;background-position:center 72%!important}
+.page-travel main > section:not(.waqi-fullbleed-hero)::before{background-image:var(--scene-travel)!important}
+.page-travel main > section:nth-of-type(2)::before{background-position:center 12%!important}
+.page-travel .story-section::before{background-position:center 46%!important}
+.page-travel .quote::before{background-position:center 67%!important}
+.home-premium #why::before{background-image:var(--scene-why)!important;background-position:center 20%!important}
+.home-premium .waqi-perspective-section::before{background-image:var(--scene-why)!important;background-position:center 56%!important}
+
+.page-home #home-rebuild::after,
+.page-commercial #contractor-example::after,
+.page-travel main > section:not(.waqi-fullbleed-hero)::after,
+.home-premium #why::after,
+.home-premium .waqi-perspective-section::after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  pointer-events:none!important;
+  background:linear-gradient(180deg,rgba(3,16,29,.48),rgba(4,24,42,.30) 50%,rgba(3,16,29,.54))!important;
+}
+.page-home #home-rebuild > *,
+.page-commercial #contractor-example > *,
+.page-travel main > section:not(.waqi-fullbleed-hero) > *,
+.home-premium #why > *,
+.home-premium .waqi-perspective-section > *{position:relative!important;z-index:2!important}
+
+/* Travel FAQ is outside <main>; keep its scene visible immediately as well. */
+.page-travel .auto-faq{
+  background-image:linear-gradient(rgba(3,16,29,.62),rgba(3,16,29,.76)),var(--scene-travel)!important;
+  background-position:center 88%!important;
+  background-size:cover!important;
+}
+
+/* Why Waqi desktop/tablet: actual two-column hero. Previous HTML accidentally nested
+   the figure inside the copy column, making desktop look like a phone layout. */
+@media(min-width:901px){
+  .home-premium .home-premium-hero-grid{
+    grid-template-columns:minmax(0,1.04fr) minmax(460px,.96fr)!important;
+    gap:64px!important;
+    align-items:center!important;
+  }
+  .home-premium .home-premium-hero-copy{max-width:760px!important;width:100%!important}
+  .home-premium .home-premium-hero-copy h1{max-width:740px!important}
+  .home-premium .home-premium-hero-copy>p{max-width:690px!important}
+  .home-premium .home-premium-hero-visual{width:100%!important;max-width:none!important}
+}
+@media(min-width:601px) and (max-width:900px){
+  .home-premium .home-premium-hero-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(300px,.9fr)!important;
+    gap:30px!important;
+    align-items:center!important;
+  }
+  .home-premium .home-premium-hero-copy{max-width:none!important;width:100%!important;margin:0!important}
+}
+
+/* Scroll cue belongs to Why clients choose Waqi, but not underneath the signature line. */
+.home-premium #why .why-section-scroll-cue{
+  margin:36px auto 24px!important;
+}
+.home-premium #why .waqi-assurance-signature{
+  margin-top:20px!important;
+}
+
+/* Ensure immediate paint remains absolute: no delayed opacity/clip on FAQs or scenic sections. */
+.page-home #home-rebuild,.page-commercial #contractor-example,
+.page-travel main>section,.page-travel .auto-faq,
+.home-premium #why,.home-premium .waqi-perspective-section,
+.page-home #home-rebuild *,.page-commercial #contractor-example *,
+.page-travel main>section *,.page-travel .auto-faq *,
+.home-premium #why *,.home-premium .waqi-perspective-section *{
+  animation-delay:0s!important;
+  transition-delay:0s!important;
+}
+
+/* =========================================================
+   V19.27 — RESPONSIVE / INSTANT-PAINT POLISH
+   Targeted fixes only: Why Waqi cue + hero balance, immediate
+   scenic paint on mobile, Auto mobile padding, Commercial mobile
+   editorial rhythm, and a stronger restrained gold hierarchy.
+   ========================================================= */
+
+/* Performance first: content is present immediately. Avoid expensive blur/reveal
+   compositing that can look like images/cards are still loading on Safari. */
+.waqi-reveal,.waqi-reveal-soft,.waqi-reveal-card,.waqi-cinematic-enter,
+.waqi-hero-enter,.waqi-hero-enter-media,
+body.waqi-motion-ready .waqi-reveal,body.waqi-motion-ready .waqi-reveal-card,
+body.waqi-motion-ready .waqi-cinematic-enter{
+  opacity:1!important;visibility:visible!important;clip-path:none!important;
+  transform:none!important;filter:none!important;animation:none!important;
+  transition:none!important;will-change:auto!important;
+}
+.page-auto .refresh-card,.page-auto .coverage-grid>article,.page-auto .rate-list div,
+.page-home .refresh-card,.page-home .coverage-card,.page-home .card,
+.page-commercial .refresh-card,.page-commercial .business-type,.page-commercial .panel,
+.page-travel .refresh-card,.home-premium .why-card,.faq-grid details,
+.quote-box,.recent-quotes-cta-inner{
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+.faq-grid details,.faq-grid summary,.faq-grid p{transition:none!important;animation:none!important}
+
+/* Use the already-preloaded compact 4K WebP scenic file everywhere.
+   This avoids requesting a second JPG scenic asset after first paint. */
+:root{
+  --scene-auto:url('../images/perf/auto-scene-4k.webp')!important;
+  --scene-home:url('../images/perf/home-scene-4k.webp')!important;
+  --scene-commercial:url('../images/perf/commercial-scene-4k.webp')!important;
+  --scene-travel:url('../images/perf/travel-scene-4k.webp')!important;
+  --scene-why:url('../images/perf/why-scene-4k.webp')!important;
+}
+@media(min-width:601px){:root{
+  --scene-auto:url('../images/perf/auto-scene-4k.webp')!important;
+  --scene-home:url('../images/perf/home-scene-4k.webp')!important;
+  --scene-commercial:url('../images/perf/commercial-scene-4k.webp')!important;
+  --scene-travel:url('../images/perf/travel-scene-4k.webp')!important;
+  --scene-why:url('../images/perf/why-scene-4k.webp')!important;
+}}
+@media(min-width:1101px){:root{
+  --scene-auto:url('../images/perf/auto-scene-4k.webp')!important;
+  --scene-home:url('../images/perf/home-scene-4k.webp')!important;
+  --scene-commercial:url('../images/perf/commercial-scene-4k.webp')!important;
+  --scene-travel:url('../images/perf/travel-scene-4k.webp')!important;
+  --scene-why:url('../images/perf/why-scene-4k.webp')!important;
+}}
+
+/* Why Waqi: desktop is intentionally wide and image-led, never a phone-width column. */
+@media(min-width:901px){
+  .home-premium .home-premium-hero .wrap{width:min(1320px,94%)!important}
+  .home-premium .home-premium-hero-grid{
+    grid-template-columns:minmax(0,.78fr) minmax(560px,1.22fr)!important;
+    gap:42px!important;align-items:center!important;
+  }
+  .home-premium .home-premium-hero-copy{max-width:590px!important;margin-left:0!important}
+  .home-premium .home-premium-hero-copy h1{max-width:590px!important;font-size:clamp(52px,5vw,74px)!important}
+  .home-premium .home-premium-hero-copy>p{max-width:570px!important}
+  .home-premium .home-premium-hero-visual{width:104%!important;max-width:none!important;margin-left:auto!important}
+  .home-premium .home-premium-hero-visual img{aspect-ratio:1.62/1!important}
+}
+@media(min-width:601px) and (max-width:900px){
+  .home-premium .home-premium-hero .wrap{width:min(960px,94%)!important}
+  .home-premium .home-premium-hero-grid{grid-template-columns:minmax(0,.9fr) minmax(340px,1.1fr)!important;gap:26px!important}
+  .home-premium .home-premium-hero-copy{max-width:none!important;width:100%!important;margin:0!important}
+  .home-premium .home-premium-hero-visual{width:104%!important}
+}
+
+/* Scroll cue belongs immediately after the 1–35–5 / Why cards — it says there is
+   more Why Waqi content below, before the consultation/signature blocks. */
+.home-premium #why .why-section-scroll-cue{
+  display:flex!important;position:relative!important;inset:auto!important;
+  width:max-content!important;margin:34px auto 10px!important;
+  align-items:center!important;justify-content:center!important;gap:9px!important;
+  color:#E8C687!important;-webkit-text-fill-color:#E8C687!important;
+  transform:none!important;z-index:4!important;
+}
+.home-premium #why .why-consultation-feature{margin-top:42px!important}
+.home-premium #why .waqi-assurance-signature{margin-top:44px!important}
+
+/* A little more Waqi gold without sacrificing readability: body text stays light,
+   while labels/card titles/rate factors carry the signature accent. */
+.home-premium #why .why-card h3,
+.page-auto #auto-rate .rate-list b,
+.page-auto .coverage-grid>article h3,
+.page-home .refresh-card h3,.page-home .coverage-card h3,.page-home .card h3,
+.page-commercial .business-type strong,.page-commercial .refresh-card h3,.page-commercial .panel h3,
+.page-travel .refresh-card h3,.page-travel .travel-grid h3,
+.auto-faq .faq-grid summary{
+  color:#E8C687!important;-webkit-text-fill-color:#E8C687!important;
+}
+.home-premium #why .section-head h2,.home-premium .waqi-perspective-section h2,
+.page-auto .auto-section-head h2,.page-home .section-head h2,
+.page-commercial .section-head h2,.page-travel .section-head h2{
+  color:#f8fafc!important;-webkit-text-fill-color:#f8fafc!important;
+}
+
+/* MOBILE: scenic imagery starts directly after the dedicated tab hero image.
+   Same preloaded image = no late second background request / naked navy flash. */
+@media(max-width:600px){
+  .page-auto #auto-path,
+  .page-home #home-types,
+  .page-commercial #business-types,
+  .page-travel main>section:nth-of-type(2){
+    background-color:#06192c!important;
+    background-repeat:no-repeat!important;background-size:cover!important;
+    border-top:0!important;
+  }
+  .page-auto #auto-path{background-image:linear-gradient(rgba(3,16,29,.64),rgba(3,16,29,.74)),var(--scene-auto)!important;background-position:center 8%!important}
+  .page-home #home-types{background-image:linear-gradient(rgba(3,16,29,.64),rgba(3,16,29,.74)),var(--scene-home)!important;background-position:center 10%!important}
+  .page-commercial #business-types{background-image:linear-gradient(rgba(3,16,29,.66),rgba(3,16,29,.76)),var(--scene-commercial)!important;background-position:center 8%!important}
+  .page-travel main>section:nth-of-type(2){background-image:linear-gradient(rgba(3,16,29,.64),rgba(3,16,29,.74)),var(--scene-travel)!important;background-position:center 8%!important}
+
+  /* Auto rate-factor cards: visible breathing room from both edges. */
+  .page-auto #auto-rate .rate-list{width:100%!important}
+  .page-auto #auto-rate .rate-list div{padding:20px 22px!important}
+  .page-auto #auto-rate .rate-list b,.page-auto #auto-rate .rate-list span{display:block!important}
+
+  /* Commercial mobile: fewer "box inside box" visuals. Coverage cards become
+     editorial rows over the scenic background; only real grouped controls remain cards. */
+  .page-commercial .refresh-dark .refresh-grid{display:block!important}
+  .page-commercial .refresh-dark .refresh-card{
+    margin:0!important;padding:22px 4px!important;border:0!important;border-radius:0!important;
+    border-bottom:1px solid rgba(232,198,135,.22)!important;
+    background:transparent!important;box-shadow:none!important;
+  }
+  .page-commercial .refresh-dark .refresh-card:first-child{border-top:1px solid rgba(232,198,135,.22)!important}
+  .page-commercial .refresh-dark .refresh-card p{max-width:34rem!important;color:#d7e0e8!important}
+  .page-commercial .refresh-dark .refresh-card h3{font-size:1.08rem!important;margin-bottom:7px!important}
+}
+
+/* =========================================================
+   V19.28 — TARGETED DESKTOP/MOBILE VISUAL CORRECTIONS
+   ========================================================= */
+
+/* Auto rate-factor copy: equal breathing room on desktop/tablet/mobile. */
+.page-auto #auto-rate .rate-list div{
+  padding:22px 24px!important;
+  box-sizing:border-box!important;
+}
+
+/* FAQ colour system: one clean treatment across Auto/Home/Commercial/Travel.
+   White information cards, dark readable copy, gold only as the small accent. */
+.page-auto .expanded-faq details,
+.page-home .expanded-faq details,
+.page-commercial .expanded-faq details,
+.page-travel .expanded-faq details{
+  background:#f8fafc!important;
+  border:1px solid rgba(214,224,234,.96)!important;
+  box-shadow:none!important;
+}
+.page-auto .expanded-faq summary,
+.page-home .expanded-faq summary,
+.page-commercial .expanded-faq summary,
+.page-travel .expanded-faq summary{
+  color:#132840!important;
+  -webkit-text-fill-color:#132840!important;
+}
+.page-auto .expanded-faq details p,
+.page-home .expanded-faq details p,
+.page-commercial .expanded-faq details p,
+.page-travel .expanded-faq details p{
+  color:#526275!important;
+  -webkit-text-fill-color:#526275!important;
+}
+.page-auto .expanded-faq summary::after,
+.page-home .expanded-faq summary::after,
+.page-commercial .expanded-faq summary::after,
+.page-travel .expanded-faq summary::after{
+  color:#B98B2E!important;
+}
+
+/* Product hero copy: replace harsh pure white with warm ivory + restrained gold phrase.
+   It stays readable over photography without visually flattening the image. */
+.page-auto .waqi-fullbleed-hero h1,
+.page-home .waqi-fullbleed-hero h1,
+.page-commercial .waqi-fullbleed-hero h1,
+.page-travel .waqi-fullbleed-hero h1{
+  color:#f5f1e8!important;
+  -webkit-text-fill-color:#f5f1e8!important;
+  text-shadow:0 2px 14px rgba(0,0,0,.38)!important;
+}
+.page-auto .waqi-fullbleed-hero h1 span,
+.page-home .waqi-fullbleed-hero h1 span,
+.page-commercial .waqi-fullbleed-hero h1 span,
+.page-travel .waqi-fullbleed-hero h1 span{
+  color:#E8C687!important;
+  -webkit-text-fill-color:#E8C687!important;
+}
+.page-auto .waqi-fullbleed-hero p,
+.page-home .waqi-fullbleed-hero p,
+.page-commercial .waqi-fullbleed-hero p,
+.page-travel .waqi-fullbleed-hero p{
+  color:#dde5ec!important;
+  -webkit-text-fill-color:#dde5ec!important;
+  text-shadow:0 1px 10px rgba(0,0,0,.34)!important;
+}
+
+/* Why Waqi top hero: gold line smaller and kept to two lines max on desktop/tablet. */
+@media(min-width:601px){
+  .home-premium .home-premium-hero h1 span{
+    display:block!important;
+    max-width:520px!important;
+    font-size:.72em!important;
+    line-height:1.03!important;
+    margin-top:8px!important;
+    text-wrap:balance!important;
+  }
+}
+@media(min-width:901px){
+  .home-premium .home-premium-hero-copy h1{
+    max-width:650px!important;
+  }
+  .home-premium .home-premium-hero h1 span{
+    max-width:500px!important;
+  }
+}
+
+/* Scroll cue placement: desktop/tablet beside the short "More choice..." intro;
+   mobile beside the Meet the 1–35–5 Broker title. */
+.home-premium #why .why-cue-desktop,
+.home-premium #why .why-cue-mobile{
+  margin:0!important;
+  width:max-content!important;
+  z-index:5!important;
+}
+.home-premium #why .why-cue-mobile{display:none!important}
+@media(min-width:601px){
+  .home-premium #why .section-head{position:relative!important;max-width:780px!important}
+  .home-premium #why .why-cue-desktop{
+    display:flex!important;
+    position:absolute!important;
+    left:-190px!important;
+    bottom:2px!important;
+    transform:scale(.92)!important;
+    transform-origin:right center!important;
+  }
+}
+@media(min-width:601px) and (max-width:1050px){
+  .home-premium #why .why-cue-desktop{
+    left:-125px!important;
+    transform:scale(.82)!important;
+  }
+}
+@media(max-width:600px){
+  .home-premium #why .why-cue-desktop{display:none!important}
+  .home-premium #why .why-135{
+    position:relative!important;
+    padding-right:104px!important;
+  }
+  .home-premium #why .why-cue-mobile{
+    display:flex!important;
+    position:absolute!important;
+    right:0!important;
+    top:50%!important;
+    transform:translateY(-50%) scale(.72)!important;
+    transform-origin:right center!important;
+  }
+  .home-premium #why .why-cue-mobile span:nth-child(2){font-size:9px!important;letter-spacing:.11em!important}
+}
+
+/* Mobile product hero: the copy directly underneath the artwork uses the same
+   scenic image, so there is no naked navy strip between hero and page content. */
+@media(max-width:600px){
+  .page-auto .waqi-fullbleed-hero[data-page="auto"]>.wrap{
+    background-image:linear-gradient(rgba(3,16,29,.70),rgba(3,16,29,.78)),var(--scene-auto)!important;
+    background-size:cover!important;background-position:center 5%!important;
+  }
+  .page-home .waqi-fullbleed-hero[data-page="home"]>.wrap{
+    background-image:linear-gradient(rgba(3,16,29,.70),rgba(3,16,29,.78)),var(--scene-home)!important;
+    background-size:cover!important;background-position:center 5%!important;
+  }
+  .page-commercial .waqi-fullbleed-hero[data-page="commercial"]>.wrap{
+    background-image:linear-gradient(rgba(3,16,29,.70),rgba(3,16,29,.78)),var(--scene-commercial)!important;
+    background-size:cover!important;background-position:center 5%!important;
+  }
+  .page-travel .waqi-fullbleed-hero[data-page="travel"]>.wrap{
+    background-image:linear-gradient(rgba(3,16,29,.70),rgba(3,16,29,.78)),var(--scene-travel)!important;
+    background-size:cover!important;background-position:center 5%!important;
+  }
+}
+
+/* Cue breakpoint refinement: desktop uses the left-of-intro position; phones/tablets
+   keep the cue attached to the 1–35–5 title so it cannot fall off-canvas. */
+@media(min-width:601px) and (max-width:900px){
+  .home-premium #why .why-cue-desktop{display:none!important}
+  .home-premium #why .why-135{position:relative!important;padding-right:150px!important}
+  .home-premium #why .why-cue-mobile{
+    display:flex!important;position:absolute!important;right:0!important;top:50%!important;
+    transform:translateY(-50%) scale(.82)!important;transform-origin:right center!important;
+  }
+}
+
+
+/* =========================================================
+   V19.29 — PERFORMANCE + MICRO POLISH
+   Device-sized assets: keep true 4K on desktop, avoid sending
+   4K vertical panoramas to phones/tablets. No delayed reveals.
+   ========================================================= */
+:root{
+  --scene-auto:url('../images/perf/auto-scene-4k.webp')!important;
+  --scene-home:url('../images/perf/home-scene-4k.webp')!important;
+  --scene-commercial:url('../images/perf/commercial-scene-4k.webp')!important;
+  --scene-travel:url('../images/perf/travel-scene-4k.webp')!important;
+  --scene-why:url('../images/perf/why-scene-4k.webp')!important;
+}
+@media(max-width:600px){
+  :root{
+    --scene-auto:url('../images/perf-responsive/auto-scene-mobile.webp')!important;
+    --scene-home:url('../images/perf-responsive/home-scene-mobile.webp')!important;
+    --scene-commercial:url('../images/perf-responsive/commercial-scene-mobile.webp')!important;
+    --scene-travel:url('../images/perf-responsive/travel-scene-mobile.webp')!important;
+    --scene-why:url('../images/perf-responsive/why-scene-mobile.webp')!important;
+  }
+  .page-auto .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/auto-hero-mobile.webp')!important}
+  .page-home .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/home-hero-mobile.webp')!important}
+  .page-commercial .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/commercial-hero-mobile.webp')!important}
+  .page-travel .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/travel-hero-mobile.webp')!important}
+}
+@media(min-width:601px) and (max-width:1100px){
+  :root{
+    --scene-auto:url('../images/perf-responsive/auto-scene-tablet.webp')!important;
+    --scene-home:url('../images/perf-responsive/home-scene-tablet.webp')!important;
+    --scene-commercial:url('../images/perf-responsive/commercial-scene-tablet.webp')!important;
+    --scene-travel:url('../images/perf-responsive/travel-scene-tablet.webp')!important;
+    --scene-why:url('../images/perf-responsive/why-scene-tablet.webp')!important;
+  }
+  .page-auto .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/auto-hero-tablet.webp')!important}
+  .page-home .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/home-hero-tablet.webp')!important}
+  .page-commercial .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/commercial-hero-tablet.webp')!important}
+  .page-travel .waqi-fullbleed-hero{--hero-bg:url('../images/perf-responsive/travel-hero-tablet.webp')!important}
+}
+@media(min-width:1101px){
+  .page-auto .waqi-fullbleed-hero{--hero-bg:url('../images/perf/auto-hero-4k.webp')!important}
+  .page-home .waqi-fullbleed-hero{--hero-bg:url('../images/perf/home-hero-4k.webp')!important}
+  .page-commercial .waqi-fullbleed-hero{--hero-bg:url('../images/perf/commercial-hero-4k.webp')!important}
+  .page-travel .waqi-fullbleed-hero{--hero-bg:url('../images/perf/travel-hero-4k.webp')!important}
+}
+
+/* Explicitly keep the initial viewport synchronous-looking. */
+.waqi-fullbleed-hero,.home-premium-hero,
+.page-auto main,.page-home main,.page-commercial main,.page-travel main,.home-premium main{
+  transition:none!important;
+}
+
+/* Micro polish with zero scroll-time work: better typography and quiet depth. */
+h1,h2,.auto-section-head h2,.section-head h2{ text-wrap:balance; }
+.hero-copy p,.auto-hero-copy p,.pagehero p,.section-head p,.auto-section-head p{ text-wrap:pretty; }
+@media(min-width:901px){
+  .comic-situation-card.approved-comic-only img,
+  .home-premium-hero-visual img,
+  .why-consultation-feature figure img{
+    box-shadow:0 18px 48px rgba(0,0,0,.22);
+  }
+}
