@@ -2028,5 +2028,6 @@ syncApplicant();goToStep(1);offerResumeDraft();
   if(mq.addEventListener) mq.addEventListener('change',update);
 })();
 </script>
+<script>document.addEventListener('contextmenu',function(e){if(e.target&&e.target.closest&&e.target.closest('img'))e.preventDefault();});document.addEventListener('dragstart',function(e){if(e.target&&e.target.closest&&e.target.closest('img'))e.preventDefault();});</script>
 </body>
 </html>

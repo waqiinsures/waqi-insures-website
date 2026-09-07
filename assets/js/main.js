@@ -68,3 +68,11 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',
   window.addEventListener('load', redraw);
   window.addEventListener('resize', redraw);
 })();
+
+// Keep site artwork in-page while preserving native pinch-to-zoom.
+document.addEventListener('contextmenu', function (event) {
+  if (event.target && event.target.closest && event.target.closest('img')) event.preventDefault();
+});
+document.addEventListener('dragstart', function (event) {
+  if (event.target && event.target.closest && event.target.closest('img')) event.preventDefault();
+});

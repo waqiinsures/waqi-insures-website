@@ -6508,3 +6508,928 @@ h1,h2,.auto-section-head h2,.section-head h2{ text-wrap:balance; }
     box-shadow:0 18px 48px rgba(0,0,0,.22);
   }
 }
+
+/* =========================================================
+   V19.30 — MOBILE-ONLY EDITORIAL / OPEN LAYOUT
+   Phones <=600px only. Desktop + tablet intentionally untouched.
+   Informational cards become free editorial rows so the scenic
+   Ontario backgrounds remain visible. Functional CTA/FAQ surfaces stay cards.
+   ========================================================= */
+@media(max-width:600px){
+  /* More breathing room between editorial groups, without changing content. */
+  .page-auto main>section:not(.waqi-fullbleed-hero),
+  .page-home main>section:not(.waqi-fullbleed-hero),
+  .page-commercial main>section:not(.waqi-fullbleed-hero),
+  .page-travel main>section:not(.waqi-fullbleed-hero),
+  .home-premium main>section:not(.home-premium-hero){
+    border-radius:0!important;
+  }
+
+  /* Generic informational grids: remove the "box after box" treatment. */
+  .page-auto #auto-path .refresh-grid,
+  .page-auto .auto-coverage .coverage-grid,
+  .page-auto .auto-rate .rate-list,
+  .page-home #home-types .refresh-grid,
+  .page-home #home-coverages .coverage-grid,
+  .page-commercial #commercial-coverages .refresh-grid,
+  .page-travel .travel-grid,
+  .home-premium #why .why-grid{
+    display:block!important;
+    width:100%!important;
+  }
+
+  .page-auto #auto-path .refresh-card,
+  .page-auto .auto-coverage .coverage-grid>article,
+  .page-auto .auto-rate .rate-list>div,
+  .page-home #home-types .refresh-card,
+  .page-home #home-coverages .coverage-grid>article,
+  .page-commercial #commercial-coverages .refresh-card,
+  .page-travel .travel-grid>.refresh-card,
+  .home-premium #why .why-card{
+    position:relative!important;
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:23px 2px 24px!important;
+    min-height:0!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    transform:none!important;
+  }
+
+  .page-auto #auto-path .refresh-card+ .refresh-card,
+  .page-auto .auto-coverage .coverage-grid>article+article,
+  .page-auto .auto-rate .rate-list>div+div,
+  .page-home #home-types .refresh-card+ .refresh-card,
+  .page-home #home-coverages .coverage-grid>article+article,
+  .page-commercial #commercial-coverages .refresh-card+ .refresh-card,
+  .page-travel .travel-grid>.refresh-card+ .refresh-card,
+  .home-premium #why .why-card+ .why-card{
+    border-top:1px solid rgba(232,198,135,.25)!important;
+  }
+
+  /* First/last rows get a quiet editorial rail rather than a surrounding card. */
+  .page-auto #auto-path .refresh-grid,
+  .page-auto .auto-coverage .coverage-grid,
+  .page-auto .auto-rate .rate-list,
+  .page-home #home-types .refresh-grid,
+  .page-home #home-coverages .coverage-grid,
+  .page-commercial #commercial-coverages .refresh-grid,
+  .page-travel .travel-grid,
+  .home-premium #why .why-grid{
+    border-top:1px solid rgba(232,198,135,.18)!important;
+    border-bottom:1px solid rgba(232,198,135,.18)!important;
+  }
+
+  /* Titles stay gold; body copy becomes light enough to sit directly on scenery. */
+  .page-auto #auto-path .refresh-card h3,
+  .page-auto .auto-coverage .coverage-grid>article h3,
+  .page-auto .auto-rate .rate-list>div b,
+  .page-home #home-types .refresh-card h3,
+  .page-home #home-coverages .coverage-grid>article h3,
+  .page-commercial #commercial-coverages .refresh-card h3,
+  .page-travel .travel-grid>.refresh-card h3,
+  .home-premium #why .why-card h3{
+    color:#E8C687!important;
+    -webkit-text-fill-color:#E8C687!important;
+    margin:0 0 7px!important;
+  }
+  .page-auto #auto-path .refresh-card p,
+  .page-auto .auto-coverage .coverage-grid>article p,
+  .page-auto .auto-rate .rate-list>div span,
+  .page-home #home-types .refresh-card p,
+  .page-home #home-coverages .coverage-grid>article p,
+  .page-commercial #commercial-coverages .refresh-card p,
+  .page-travel .travel-grid>.refresh-card p,
+  .home-premium #why .why-card p{
+    color:#dbe4eb!important;
+    -webkit-text-fill-color:#dbe4eb!important;
+    line-height:1.62!important;
+    max-width:36rem!important;
+  }
+
+  /* Auto All Perils icon remains visible, but becomes part of the editorial row. */
+  .page-auto .auto-coverage .coverage-all-perils-icon{
+    float:right!important;
+    margin:0 0 8px 16px!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+
+  /* Commercial business types: compact editorial list, still fully tappable. */
+  .page-commercial #business-types .business-type-grid{
+    display:block!important;
+    border-top:1px solid rgba(232,198,135,.18)!important;
+    border-bottom:1px solid rgba(232,198,135,.18)!important;
+  }
+  .page-commercial #business-types .business-type{
+    display:block!important;
+    width:100%!important;
+    margin:0!important;
+    padding:19px 2px 20px!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    transform:none!important;
+  }
+  .page-commercial #business-types .business-type+ .business-type{
+    border-top:1px solid rgba(232,198,135,.22)!important;
+  }
+  .page-commercial #business-types .business-type strong{
+    display:block!important;
+    color:#E8C687!important;
+    -webkit-text-fill-color:#E8C687!important;
+    margin-bottom:5px!important;
+  }
+  .page-commercial #business-types .business-type span{
+    display:block!important;
+    color:#dbe4eb!important;
+    -webkit-text-fill-color:#dbe4eb!important;
+    font-size:.9rem!important;
+  }
+
+  /* Home rebuild / Commercial contractor: turn the secondary info panel into
+     a free pull-quote style block, not another card. */
+  .page-home #home-rebuild .panel,
+  .page-commercial #contractor-example .panel{
+    margin-top:8px!important;
+    padding:20px 0 4px 18px!important;
+    background:transparent!important;
+    border:0!important;
+    border-left:2px solid rgba(232,198,135,.62)!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+  }
+  .page-home #home-rebuild .panel h3,
+  .page-commercial #contractor-example .panel h3{
+    color:#E8C687!important;
+    -webkit-text-fill-color:#E8C687!important;
+  }
+  .page-home #home-rebuild .panel p,
+  .page-commercial #contractor-example .panel p{
+    color:#dbe4eb!important;
+    -webkit-text-fill-color:#dbe4eb!important;
+  }
+
+  /* Why Waqi numbers/icons no longer sit inside chunky card geometry. */
+  .home-premium #why .why-card .why-number-badge,
+  .home-premium #why .why-card .why-icon{
+    display:inline-flex!important;
+    width:auto!important;
+    min-width:34px!important;
+    height:30px!important;
+    padding:0 8px!important;
+    margin:0 0 10px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border:1px solid rgba(232,198,135,.48)!important;
+    border-radius:999px!important;
+    background:rgba(4,24,42,.22)!important;
+    box-shadow:none!important;
+  }
+
+  /* Consultation itself becomes an editorial feature. Keep the meaningful
+     direct-vs-Waqi comparison boxes and buttons as structured elements. */
+  .home-premium #why .why-consultation-feature{
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    overflow:visible!important;
+  }
+  .home-premium #why .why-consultation-feature .consultation-copy{
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  .home-premium #why .why-consultation-feature figure{
+    border-radius:14px!important;
+    overflow:hidden!important;
+  }
+
+  /* Comics are imagery, not UI cards: remove ornamental card chrome only. */
+  .page-auto .comic-situation-card,
+  .page-home .comic-situation-card,
+  .page-commercial .comic-situation-card,
+  .page-travel .comic-situation-card{
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    padding:0!important;
+  }
+
+  /* Deliberately KEEP these as cards: they are actionable / interactive. */
+  .quote-box,
+  .recent-quotes-cta-inner,
+  .expanded-faq .faq-grid details{
+    border-radius:14px!important;
+  }
+}
+
+/* =========================================================
+   V19.31 — MOBILE-ONLY WHY WAQI SPACING + COMPARISON POLISH
+   Phones <=600px only. Desktop + tablet intentionally untouched.
+   ========================================================= */
+@media(max-width:600px){
+  /* Give the Why Waqi editorial content a safer inner rail so text never
+     crowds the phone edge. Scope begins with the first broker benefit and
+     continues through the consultation block. */
+  .home-premium #why .why-grid,
+  .home-premium #why .why-consultation-feature{
+    width:calc(100% - 24px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  .home-premium #why .why-card{
+    padding-left:10px!important;
+    padding-right:10px!important;
+  }
+
+  .home-premium #why .why-consultation-feature .consultation-copy{
+    padding-left:10px!important;
+    padding-right:10px!important;
+  }
+
+  /* Comparison is deliberately a little narrower than the surrounding copy,
+     centered, with a visible VS separator on phones. */
+  .home-premium #why .broker-compare{
+    width:92%!important;
+    max-width:360px!important;
+    margin:20px auto 25px!important;
+    gap:9px!important;
+  }
+  .home-premium #why .broker-compare>div{
+    width:100%!important;
+    padding:12px 14px!important;
+    border-radius:10px!important;
+  }
+  .home-premium #why .broker-compare>b{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-height:24px!important;
+    color:#7b8793!important;
+    -webkit-text-fill-color:#7b8793!important;
+    font-size:12px!important;
+    font-weight:900!important;
+    letter-spacing:.16em!important;
+    text-transform:lowercase!important;
+  }
+  .home-premium #why .broker-compare>b::before,
+  .home-premium #why .broker-compare>b::after{
+    content:""!important;
+    display:block!important;
+    height:1px!important;
+    flex:1!important;
+    background:rgba(232,198,135,.30)!important;
+    margin:0 10px!important;
+  }
+}
+
+/* =========================================================
+   V19.33 — MOBILE-ONLY PREMIUM TYPOGRAPHY + VS EMPHASIS
+   Phones <=600px only. Desktop + tablet intentionally untouched.
+   ========================================================= */
+@media(max-width:600px){
+  /* Stronger, more deliberate typography rhythm on phones. */
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif!important;
+    font-size:16px!important;
+    line-height:1.62!important;
+    font-weight:400!important;
+    letter-spacing:-.006em!important;
+    -webkit-font-smoothing:antialiased!important;
+    -moz-osx-font-smoothing:grayscale!important;
+    text-rendering:optimizeLegibility!important;
+  }
+
+  h1,h2,h3,
+  .section-head h2,
+  .auto-section-head h2,
+  .consultation-copy h2,
+  .home-premium #why h2,
+  .home-premium #why h3{
+    font-family:Georgia,"Times New Roman",serif!important;
+    font-weight:700!important;
+    font-kerning:normal!important;
+    text-rendering:optimizeLegibility!important;
+  }
+
+  h1,
+  .waqi-fullbleed-hero h1,
+  .home-premium-hero h1{
+    letter-spacing:-.038em!important;
+    line-height:.99!important;
+  }
+
+  h2,
+  .section-head h2,
+  .auto-section-head h2,
+  .consultation-copy h2,
+  .home-premium #why h2{
+    letter-spacing:-.028em!important;
+    line-height:1.06!important;
+  }
+
+  h3,
+  .home-premium #why .why-card h3,
+  .refresh-card h3,
+  .coverage-grid h3{
+    letter-spacing:-.014em!important;
+    line-height:1.18!important;
+  }
+
+  p,li,
+  .refresh-card p,
+  .coverage-grid p,
+  .why-card p,
+  .consultation-copy p{
+    font-size:15.5px!important;
+    line-height:1.68!important;
+    font-weight:430!important;
+    letter-spacing:-.004em!important;
+  }
+
+  /* Editorial rows: slightly more hierarchy and breathing room, without
+     bringing back the boxed look. */
+  .page-auto #auto-path .refresh-card,
+  .page-auto .auto-coverage .coverage-grid>article,
+  .page-auto .auto-rate .rate-list>div,
+  .page-home #home-types .refresh-card,
+  .page-home #home-coverages .coverage-grid>article,
+  .page-commercial #commercial-coverages .refresh-card,
+  .page-travel .travel-grid>.refresh-card,
+  .home-premium #why .why-card{
+    padding-top:26px!important;
+    padding-bottom:27px!important;
+  }
+
+  .page-auto #auto-path .refresh-card h3,
+  .page-auto .auto-coverage .coverage-grid>article h3,
+  .page-home #home-types .refresh-card h3,
+  .page-home #home-coverages .coverage-grid>article h3,
+  .page-commercial #commercial-coverages .refresh-card h3,
+  .page-travel .travel-grid>.refresh-card h3,
+  .home-premium #why .why-card h3{
+    font-size:1.22rem!important;
+    margin-bottom:9px!important;
+  }
+
+  /* Eyebrows/kickers should feel like restrained editorial labels. */
+  .eyebrow,.refresh-kicker,.rq-kicker,.comic-feature-kicker,
+  .home-premium #why .why-eyebrow{
+    font-size:10.5px!important;
+    font-weight:800!important;
+    letter-spacing:.17em!important;
+    line-height:1.3!important;
+  }
+
+  /* Mobile comparison separator: same understated desktop grey, but now
+     unmistakably visible as the comparison marker. */
+  .home-premium #why .broker-compare>b{
+    min-height:30px!important;
+    color:#7b8793!important;
+    -webkit-text-fill-color:#7b8793!important;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+    font-size:16px!important;
+    line-height:1!important;
+    font-weight:800!important;
+    letter-spacing:.08em!important;
+  }
+  .home-premium #why .broker-compare>b::before,
+  .home-premium #why .broker-compare>b::after{
+    margin:0 12px!important;
+  }
+
+  /* Keep button typography crisp and intentionally separate from editorial copy. */
+  .btn,.button,button,.quote-box a{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif!important;
+    font-weight:750!important;
+    letter-spacing:.002em!important;
+  }
+}
+
+/* =========================================================
+   V19.34 — MOBILE-FIRST OPEN EDITORIAL FINISH
+   Phones <=600px only. Desktop + tablet intentionally untouched.
+   ========================================================= */
+@media(max-width:600px){
+  /* Why Waqi benefits: preserve the exact badge/title/copy structure but let
+     the Ontario scene breathe. No card fills, borders, shadows or rounding. */
+  .home-premium #why .why-grid{
+    display:block!important;
+    width:calc(100% - 38px)!important;
+    max-width:none!important;
+    margin:8px auto 0!important;
+  }
+  .home-premium #why .why-card,
+  .home-premium #why .why-card.why-card-linked{
+    position:relative!important;
+    display:grid!important;
+    grid-template-columns:52px minmax(0,1fr)!important;
+    column-gap:14px!important;
+    row-gap:5px!important;
+    align-items:start!important;
+    width:100%!important;
+    margin:0!important;
+    padding:23px 0 25px!important;
+    background:transparent!important;
+    background-image:none!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+  }
+  .home-premium #why .why-card::after{
+    content:""!important;
+    position:absolute!important;
+    left:66px!important;
+    right:0!important;
+    bottom:0!important;
+    height:1px!important;
+    background:linear-gradient(90deg,rgba(232,198,135,.44),rgba(232,198,135,.08),transparent)!important;
+  }
+  .home-premium #why .why-card:last-child::after{display:none!important;}
+  .home-premium #why .why-number-badge,
+  .home-premium #why .why-icon{
+    grid-column:1!important;
+    grid-row:1 / span 2!important;
+    align-self:start!important;
+    justify-self:start!important;
+    margin:1px 0 0!important;
+    width:46px!important;
+    min-width:46px!important;
+    height:34px!important;
+    min-height:34px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    padding:0!important;
+    color:#e8c687!important;
+    -webkit-text-fill-color:#e8c687!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;
+    font-size:15px!important;
+    line-height:1!important;
+    font-weight:800!important;
+    letter-spacing:.015em!important;
+  }
+  .home-premium #why .why-card h3{
+    grid-column:2!important;
+    margin:0!important;
+    font-size:1.12rem!important;
+    line-height:1.17!important;
+    letter-spacing:-.018em!important;
+  }
+  .home-premium #why .why-card p{
+    grid-column:2!important;
+    margin:2px 0 0!important;
+    font-size:15px!important;
+    line-height:1.61!important;
+  }
+
+  /* Pre-FAQ / closing CTAs become open editorial pauses rather than cards. */
+  .page-auto .recent-quotes-cta,
+  .page-home .quote,
+  .page-commercial .quote,
+  .page-travel .quote,
+  .home-premium .quote{
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+  }
+  .page-auto .recent-quotes-cta .wrap,
+  .page-home .quote .wrap,
+  .page-commercial .quote .wrap,
+  .page-travel .quote .wrap,
+  .home-premium .quote .wrap{
+    width:calc(100% - 38px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  .page-auto .recent-quotes-cta-inner,
+  .page-home .quote-box,
+  .page-commercial .quote-box,
+  .page-travel .quote-box,
+  .home-premium .quote-box{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:17px!important;
+    width:100%!important;
+    margin:0!important;
+    padding:39px 0 42px!important;
+    background:transparent!important;
+    background-image:none!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    text-align:left!important;
+  }
+  .page-auto .recent-quotes-cta-inner::before,
+  .page-home .quote-box::before,
+  .page-commercial .quote-box::before,
+  .page-travel .quote-box::before,
+  .home-premium .quote-box::before{
+    content:""!important;
+    width:44px!important;
+    height:2px!important;
+    margin-bottom:2px!important;
+    background:#e8c687!important;
+    opacity:.88!important;
+  }
+  .page-auto .recent-quotes-cta-inner h2,
+  .page-home .quote-box h2,
+  .page-commercial .quote-box h2,
+  .page-travel .quote-box h2,
+  .home-premium .quote-box h2{
+    max-width:330px!important;
+    margin:0!important;
+    font-size:clamp(1.58rem,7vw,1.92rem)!important;
+    line-height:1.06!important;
+    letter-spacing:-.03em!important;
+  }
+  .page-auto .recent-quotes-cta-inner p,
+  .page-home .quote-box p,
+  .page-commercial .quote-box p,
+  .page-travel .quote-box p,
+  .home-premium .quote-box p{
+    max-width:340px!important;
+    margin:8px 0 0!important;
+    font-size:15px!important;
+    line-height:1.62!important;
+  }
+  .page-home .quote-box .hero-actions,
+  .page-commercial .quote-box .hero-actions,
+  .page-travel .quote-box .hero-actions,
+  .home-premium .quote-box .hero-actions{
+    width:100%!important;
+    justify-content:flex-start!important;
+    gap:10px!important;
+    margin:0!important;
+  }
+  .page-auto .recent-quotes-cta-inner>.btn,
+  .page-home .quote-box .btn,
+  .page-commercial .quote-box .btn,
+  .page-travel .quote-box .btn,
+  .home-premium .quote-box .btn{
+    min-height:46px!important;
+    padding:12px 18px!important;
+    border-radius:999px!important;
+    font-size:14px!important;
+  }
+
+  /* Refine phone headings so scenic pages feel composed, not oversized. */
+  .section-head h2,.auto-section-head h2,.refresh-head h2,
+  .home-premium #why .section-head h2{
+    font-size:clamp(1.55rem,7.1vw,1.92rem)!important;
+    line-height:1.07!important;
+  }
+  .waqi-fullbleed-hero h1,.home-premium-hero h1{
+    font-size:clamp(2.18rem,10.7vw,3rem)!important;
+    line-height:.99!important;
+  }
+}
+
+/* =========================================================
+   V19.35 — MOBILE FINAL QUALITY CONTROL
+   Phones <=600px only. Desktop + tablet intentionally untouched.
+   Tightens typography, rails and rhythm after the open-editorial pass.
+   ========================================================= */
+@media(max-width:600px){
+  /* Use the site's established type stack and real supported weights. */
+  body{
+    font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+    font-size:16px!important;
+    line-height:1.6!important;
+    font-weight:400!important;
+    letter-spacing:-.003em!important;
+  }
+  p,li,
+  .refresh-card p,.coverage-grid p,.why-card p,.consultation-copy p{
+    font-size:15.25px!important;
+    line-height:1.64!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+  .btn,.button,button,.quote-box a{
+    font-weight:700!important;
+  }
+
+  /* More controlled phone hierarchy: premium, but never poster-sized. */
+  .waqi-fullbleed-hero h1,.home-premium-hero h1{
+    font-size:clamp(2.08rem,9.8vw,2.78rem)!important;
+    line-height:1.01!important;
+    letter-spacing:-.034em!important;
+  }
+  .section-head h2,.auto-section-head h2,.refresh-head h2,
+  .home-premium #why .section-head h2{
+    font-size:clamp(1.48rem,6.6vw,1.82rem)!important;
+    line-height:1.08!important;
+    letter-spacing:-.025em!important;
+  }
+
+  /* Consistent safe rail on the open editorial content. */
+  .page-auto main>section:not(.waqi-fullbleed-hero)>.wrap,
+  .page-home main>section:not(.waqi-fullbleed-hero)>.wrap,
+  .page-commercial main>section:not(.waqi-fullbleed-hero)>.wrap,
+  .page-travel main>section:not(.waqi-fullbleed-hero)>.wrap,
+  .home-premium main>section:not(.home-premium-hero)>.wrap{
+    width:calc(100% - 44px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+
+  /* Why benefits: clean editorial rhythm and comfortable edge clearance. */
+  .home-premium #why .why-grid{
+    width:100%!important;
+    margin:8px 0 0!important;
+  }
+  .home-premium #why .why-card,
+  .home-premium #why .why-card.why-card-linked{
+    grid-template-columns:48px minmax(0,1fr)!important;
+    column-gap:13px!important;
+    padding:22px 0 24px!important;
+  }
+  .home-premium #why .why-card::after{
+    left:61px!important;
+  }
+  .home-premium #why .why-number-badge,
+  .home-premium #why .why-icon{
+    width:43px!important;
+    min-width:43px!important;
+    font-size:15px!important;
+  }
+  .home-premium #why .why-card h3{
+    font-size:1.08rem!important;
+    line-height:1.2!important;
+    letter-spacing:-.014em!important;
+  }
+
+  /* Comparison stays intentionally structured, but feels compact and centered. */
+  .home-premium #why .broker-compare{
+    width:94%!important;
+    max-width:350px!important;
+    margin:22px auto 27px!important;
+  }
+  .home-premium #why .broker-compare>b{
+    min-height:34px!important;
+    font-size:18px!important;
+    font-weight:700!important;
+    letter-spacing:.055em!important;
+  }
+
+  /* Open closing CTAs: enough presence without becoming another giant block. */
+  .page-auto .recent-quotes-cta .wrap,
+  .page-home .quote .wrap,
+  .page-commercial .quote .wrap,
+  .page-travel .quote .wrap,
+  .home-premium .quote .wrap{
+    width:calc(100% - 44px)!important;
+  }
+  .page-auto .recent-quotes-cta-inner,
+  .page-home .quote-box,.page-commercial .quote-box,
+  .page-travel .quote-box,.home-premium .quote-box{
+    gap:15px!important;
+    padding:34px 0 38px!important;
+  }
+  .page-auto .recent-quotes-cta-inner h2,
+  .page-home .quote-box h2,.page-commercial .quote-box h2,
+  .page-travel .quote-box h2,.home-premium .quote-box h2{
+    font-size:clamp(1.48rem,6.7vw,1.82rem)!important;
+    line-height:1.08!important;
+  }
+
+  /* Keep the editorial separators elegant rather than visually dominant. */
+  .page-auto #auto-path .refresh-card+ .refresh-card,
+  .page-auto .auto-coverage .coverage-grid>article+article,
+  .page-auto .auto-rate .rate-list>div+div,
+  .page-home #home-types .refresh-card+ .refresh-card,
+  .page-home #home-coverages .coverage-grid>article+article,
+  .page-commercial #commercial-coverages .refresh-card+ .refresh-card,
+  .page-travel .travel-grid>.refresh-card+ .refresh-card{
+    border-top-color:rgba(232,198,135,.18)!important;
+  }
+}
+
+/* Mobile assurance signature + image interaction */
+img{
+  -webkit-user-drag:none;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
+}
+@media(max-width:600px){
+  .waqi-assurance-signature p{
+    font-size:clamp(27px,7.7vw,33px)!important;
+    line-height:1.22!important;
+  }
+  .waqi-assurance-signature span{
+    font-size:15px!important;
+  }
+}
+
+/* Mobile Why Waqi edge-clearance correction — phone only */
+@media(max-width:600px){
+  .home-premium #why .why-grid{
+    width:calc(100% - 16px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:8px!important;
+    padding-right:8px!important;
+    box-sizing:border-box!important;
+  }
+  .home-premium #why .why-card,
+  .home-premium #why .why-card.why-card-linked{
+    grid-template-columns:46px minmax(0,1fr)!important;
+    column-gap:16px!important;
+    padding-left:4px!important;
+    padding-right:4px!important;
+    box-sizing:border-box!important;
+  }
+  .home-premium #why .why-card::after{left:62px!important;right:4px!important;}
+}
+
+
+/* Product hero split layout — desktop/tablet only. Mobile <=600px intentionally retains the established full-image hero. */
+@media (min-width:601px){
+  .page-auto .waqi-product-split,
+  .page-home .waqi-product-split,
+  .page-commercial .waqi-product-split,
+  .page-travel .waqi-product-split{
+    --product-scene:var(--scene-auto);
+    position:relative!important;
+    isolation:isolate;
+    width:100%!important;
+    height:auto!important;
+    min-height:560px!important;
+    aspect-ratio:auto!important;
+    display:flex!important;
+    align-items:center!important;
+    margin:0!important;
+    overflow:hidden!important;
+    background-image:
+      linear-gradient(90deg,rgba(2,11,20,.78),rgba(3,18,31,.64)),
+      var(--product-scene)!important;
+    background-size:cover!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    border-bottom:1px solid rgba(209,161,58,.34)!important;
+  }
+  .page-home .waqi-product-split{--product-scene:var(--scene-home)}
+  .page-commercial .waqi-product-split{--product-scene:var(--scene-commercial)}
+  .page-travel .waqi-product-split{--product-scene:var(--scene-travel)}
+  .waqi-product-split::before{
+    content:""!important;position:absolute!important;inset:0!important;z-index:-1!important;
+    background:linear-gradient(180deg,rgba(2,10,18,.15),rgba(2,10,18,.48))!important;
+    pointer-events:none!important;
+  }
+  .waqi-product-split>.wrap,
+  .page-auto .waqi-product-split>.auto-hero-grid{
+    width:min(1320px,94%)!important;
+    max-width:1320px!important;
+    min-height:560px!important;
+    padding:54px 0!important;
+    margin:0 auto!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,.82fr) minmax(520px,1.18fr)!important;
+    gap:42px!important;
+    align-items:center!important;
+  }
+  .waqi-product-split.image-left>.wrap{
+    grid-template-columns:minmax(520px,1.18fr) minmax(0,.82fr)!important;
+  }
+  .waqi-product-split.image-left .product-hero-copy{grid-column:2;grid-row:1}
+  .waqi-product-split.image-left .product-hero-media{grid-column:1;grid-row:1}
+  .waqi-product-split .product-hero-copy{
+    position:relative;z-index:2;max-width:590px!important;padding:20px 0!important;
+  }
+  .waqi-product-split h1,
+  .page-auto .waqi-product-split h1{
+    max-width:610px!important;
+    margin:10px 0 18px!important;
+    font-size:clamp(46px,4.6vw,72px)!important;
+    line-height:.99!important;
+    color:#f5f1e8!important;
+    text-shadow:0 10px 30px rgba(0,0,0,.34)!important;
+  }
+  .waqi-product-split p,
+  .page-auto .waqi-product-split p{
+    max-width:560px!important;font-size:17px!important;line-height:1.65!important;color:#d0d8e1!important;
+  }
+  .waqi-product-split .product-hero-media{
+    position:relative;z-index:1;
+    width:100%;min-height:430px;aspect-ratio:1.62/1;
+    border-radius:24px;
+    overflow:hidden;
+    background-image:var(--hero-bg)!important;
+    background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+    border:1px solid rgba(224,182,91,.34);
+    box-shadow:0 28px 70px rgba(0,0,0,.32);
+  }
+  .waqi-product-split .product-hero-media::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.025),inset 0 -70px 90px rgba(0,0,0,.12);
+  }
+  .waqi-product-split[data-page="auto"] .product-hero-media{background-position:center 54%!important}
+  .waqi-product-split[data-page="home"] .product-hero-media{background-position:center 48%!important}
+  .waqi-product-split[data-page="commercial"] .product-hero-media{background-position:center 50%!important}
+  .waqi-product-split[data-page="travel"] .product-hero-media{background-position:center 50%!important}
+}
+
+/* Tablet keeps the same premium split concept; only proportions tighten. */
+@media (min-width:601px) and (max-width:900px){
+  .waqi-product-split>.wrap,
+  .page-auto .waqi-product-split>.auto-hero-grid{
+    width:min(94%,900px)!important;
+    min-height:500px!important;
+    grid-template-columns:minmax(0,.88fr) minmax(320px,1.12fr)!important;
+    gap:24px!important;padding:38px 0!important;
+  }
+  .waqi-product-split.image-left>.wrap{grid-template-columns:minmax(320px,1.12fr) minmax(0,.88fr)!important}
+  .waqi-product-split h1,.page-auto .waqi-product-split h1{font-size:clamp(38px,5.2vw,52px)!important}
+  .waqi-product-split p,.page-auto .waqi-product-split p{font-size:15.5px!important}
+  .waqi-product-split .product-hero-media{min-height:320px;border-radius:20px}
+}
+
+/* Mobile protection: retain previous full-background hero exactly; the added split media is not rendered. */
+@media (max-width:600px){
+  .waqi-product-split .product-hero-media{display:none!important}
+}
+@media (max-width:600px){
+  .page-home .waqi-product-split .product-hero-copy,
+  .page-commercial .waqi-product-split .product-hero-copy,
+  .page-travel .waqi-product-split .product-hero-copy{display:contents!important}
+}
+
+/* Production desktop/tablet background quality lock — 2026-09-07
+   Mobile intentionally unchanged. Use the highest-quality 4096px Ontario scene masters
+   for every viewport above 600px so large background surfaces never fall back to tablet assets. */
+@media (min-width:601px){
+  :root{
+    --scene-auto:url('../images/ontario-scenes-hires/auto-ontario-desktop.jpg')!important;
+    --scene-home:url('../images/ontario-scenes-hires/home-ontario-desktop.jpg')!important;
+    --scene-commercial:url('../images/ontario-scenes-hires/commercial-ontario-desktop.jpg')!important;
+    --scene-travel:url('../images/ontario-scenes-hires/travel-ontario-desktop.jpg')!important;
+    --scene-why:url('../images/ontario-scenes-hires/why-ontario-desktop.jpg')!important;
+  }
+}
+
+/* Desktop/tablet cinematic quality pass. Phone layout/assets remain untouched. */
+@media (min-width:601px){
+  /* Full-resolution scene masters across every tab from hero through FAQ/footer lead-in. */
+  :root{
+    --scene-auto:url('../images/ontario-scenes-hires/auto-ontario-desktop.jpg')!important;
+    --scene-home:url('../images/ontario-scenes-hires/home-ontario-desktop.jpg')!important;
+    --scene-commercial:url('../images/ontario-scenes-hires/commercial-ontario-desktop.jpg')!important;
+    --scene-travel:url('../images/ontario-scenes-hires/travel-ontario-desktop.jpg')!important;
+    --scene-why:url('../images/ontario-scenes-hires/why-ontario-desktop.jpg')!important;
+  }
+  .page-auto main,.page-home main,.page-commercial main,.page-travel main,.home-premium main{
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+    background-position:center top!important;
+  }
+  /* Give the product photography more authority without squeezing the copy. */
+  .waqi-product-split>.wrap,
+  .page-auto .waqi-product-split>.auto-hero-grid{
+    width:min(1440px,96%)!important;
+    max-width:1440px!important;
+    grid-template-columns:minmax(0,.72fr) minmax(570px,1.28fr)!important;
+    gap:38px!important;
+  }
+  .waqi-product-split.image-left>.wrap{
+    grid-template-columns:minmax(570px,1.28fr) minmax(0,.72fr)!important;
+  }
+  .waqi-product-split .product-hero-media{
+    min-height:470px!important;
+    aspect-ratio:1.68/1!important;
+  }
+}
+@media (min-width:601px) and (max-width:900px){
+  .waqi-product-split>.wrap,
+  .page-auto .waqi-product-split>.auto-hero-grid{
+    width:min(96%,960px)!important;
+    grid-template-columns:minmax(0,.80fr) minmax(350px,1.20fr)!important;
+    gap:22px!important;
+  }
+  .waqi-product-split.image-left>.wrap{
+    grid-template-columns:minmax(350px,1.20fr) minmax(0,.80fr)!important;
+  }
+  .waqi-product-split .product-hero-media{min-height:350px!important}
+}

@@ -24,3 +24,9 @@ Validation performed:
 - Responsive image dimensions and generated assets checked.
 - ZIP integrity checked after packaging.
 - Chromium screenshot attempt remains unavailable in this runtime because headless Chromium times out; no browser pixel-test claim is made.
+
+V19.30 — Mobile-only editorial/open-layout pass
+- Scope is strictly phones <=600px. Desktop and tablet layout rules were not changed.
+- Informational card grids on Why Waqi, Auto, Home, Commercial and Travel are flattened into editorial rows over the scenic backgrounds.
+- Functional CTA surfaces and FAQ accordions remain cards.
+- Auto All Perils icon, accident comics, content, links, forms, footer and navigation are preserved.
